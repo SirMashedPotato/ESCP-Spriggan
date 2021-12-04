@@ -56,6 +56,7 @@
     <Compile Include="Comps\CompProperties_SpawnSprigganOnChop.cs" />
     <Compile Include="Comps\Comp_SpawnSprigganOnChop.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
+    <Compile Include="IncidentWorkers\IncidentWorker_AnimaSprigganWandersIn.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_SprigganAttack.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_SprigganWandersIn.cs" />
     <Compile Include="ModSettings\ModSettings_Utility.cs" />

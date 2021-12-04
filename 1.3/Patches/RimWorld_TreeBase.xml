@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!-- Basically every tree -->
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[@Name="TreeBase"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -8,6 +10,14 @@
 			<value>
 				<comps>
 					<li Class="ESCP_Spriggan.CompProperties_SpawnSprigganOnChop">
+						<overrideList>
+							<li>
+								<treeDefName>Plant_TreeAnima</treeDefName>
+								<kindDefName>ESCP_Spriggan_Anima</kindDefName>
+								<overrideChance>true</overrideChance>
+								<overriddenChance>1</overriddenChance>
+							</li>
+						</overrideList>
 					</li>
 				</comps>
 			</value>
@@ -16,6 +26,50 @@
 			<xpath>/Defs/ThingDef[@Name="TreeBase"]/comps</xpath>
 			<value>
 				<li Class="ESCP_Spriggan.CompProperties_SpawnSprigganOnChop">
+					<overrideList>
+						<li>
+							<treeDefName>Plant_TreeAnima</treeDefName>
+							<kindDefName>ESCP_Spriggan_Anima</kindDefName>
+							<overrideChance>true</overrideChance>
+							<overriddenChance>1</overriddenChance>
+						</li>
+					</overrideList>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Burnt tree -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="BurnedTree"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="BurnedTree"]</xpath>
+			<value>
+				<comps>
+					<li Class="ESCP_Spriggan.CompProperties_SpawnSprigganOnChop">
+						<overrideList>
+							<li>
+								<treeDefName>BurnedTree</treeDefName>
+								<kindDefName>ESCP_Spriggan_Burnt</kindDefName>
+								<overrideChance>false</overrideChance>
+							</li>
+						</overrideList>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="BurnedTree"]/comps</xpath>
+			<value>
+				<li Class="ESCP_Spriggan.CompProperties_SpawnSprigganOnChop">
+					<overrideList>
+						<li>
+							<treeDefName>BurnedTree</treeDefName>
+							<kindDefName>ESCP_Spriggan_Burnt</kindDefName>
+							<overrideChance>false</overrideChance>
+						</li>
+					</overrideList>
 				</li>
 			</value>
 		</match>

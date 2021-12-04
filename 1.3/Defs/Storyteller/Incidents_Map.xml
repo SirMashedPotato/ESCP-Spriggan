@@ -16,6 +16,20 @@
 		</targetTags>
 		<workerClass>ESCP_Spriggan.IncidentWorker_SprigganWandersIn</workerClass>
 		<baseChance>0.0</baseChance>
+		<minRefireDays>0</minRefireDays>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>ESCP_Spriggan_AnimaSprigganWandersIn</defName>
+		<label>anima spriggan wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>ESCP_Spriggan.IncidentWorker_AnimaSprigganWandersIn</workerClass>
+		<baseChance>0.1</baseChance>	<!-- no idea what this should be -->
+		<minRefireDays>30</minRefireDays>	<!-- or this -->
+		<earliestDay>90</earliestDay>	<!-- or this -->
 	</IncidentDef>
 
   <!--========================== Bad ===============================-->

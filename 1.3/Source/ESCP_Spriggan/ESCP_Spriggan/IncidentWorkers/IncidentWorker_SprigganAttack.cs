@@ -17,7 +17,7 @@ namespace ESCP_Spriggan
 				return false;
 			}
 			Map map = (Map)parms.target;
-			PawnKindDef pawnKindDef;    //overwrite with cliff racer later
+			PawnKindDef pawnKindDef;
 			IntVec3 intVec;
 			return ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out pawnKindDef) && RCellFinder.TryFindRandomPawnEntryCell(out intVec, map, CellFinder.EdgeRoadChance_Animal, false, null);
 		}
