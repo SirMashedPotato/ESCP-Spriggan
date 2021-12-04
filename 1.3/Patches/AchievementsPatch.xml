@@ -25,7 +25,7 @@
 							<label>spriggan wanders in</label>
 							<tab>ESCP_AchievementsTab</tab>
 							
-							<cost>75</cost>
+							<cost>50</cost>
 							<incident>ESCP_Spriggan_SprigganWandersIn</incident>
 						</AchievementsExpanded.Reward_MapIncident>
 		
