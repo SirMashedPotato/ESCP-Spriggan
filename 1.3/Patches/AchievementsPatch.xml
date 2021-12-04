@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>ESCP_AchievementsTab</defName>
+							<label>ESCP</label>
+						</AchievementsExpanded.AchievementTabDef>
+	
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>ESCP_RewardSprigganWandersIn</defName>
+							<label>spriggan wanders in</label>
+							<tab>ESCP_AchievementsTab</tab>
+							
+							<cost>75</cost>
+							<incident>ESCP_Spriggan_SprigganWandersIn</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+		
+						<!-- Colonists -->
+						
+						<!-- Items -->
+				
+						<!-- Kills -->
+						
+						<!-- Livestock -->
+
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

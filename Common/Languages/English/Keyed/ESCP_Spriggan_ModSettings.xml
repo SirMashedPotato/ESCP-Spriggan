@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Settings -->
+	
+	<ESCP_Spriggan_ModName>ESCP - Spriggans</ESCP_Spriggan_ModName>
+	<ESCP_Reset>Reset all settings</ESCP_Reset>
+	
+	<ESCP_Spriggan_EnableChopAttack>Enable hostile spriggan appearing out of chopped trees.</ESCP_Spriggan_EnableChopAttack>
+	<ESCP_Spriggan_EnableChopChance>The chance a hositle spriggan will appear from a chopped tree.</ESCP_Spriggan_EnableChopChance>
+	
+	<ESCP_Spriggan_EnableAttackChance>Enable spriggan attacks occurring when trees are cut.</ESCP_Spriggan_EnableAttackChance>
+	<ESCP_Spriggan_SownAttackChance>Cutting sown trees can trigger spriggan attacks.</ESCP_Spriggan_SownAttackChance>
+	<ESCP_Spriggan_ResetAttackChance>Reset the chance of a spriggan attack whenever a spriggan attack is triggered.</ESCP_Spriggan_ResetAttackChance>
+	
+	<ESCP_Spriggan_InitialAttackChance>The initial chance that a spriggan attack occurs when a tree is cut down.</ESCP_Spriggan_InitialAttackChance>
+	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
+	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance decreases every 5,000 world comp ticks.</ESCP_Spriggan_DecreasedAttackChance>
+	
+	<ESCP_Spriggan_DebugAttackChance>[DEV] Print the current attack chance in the devlog whenever the chance is modified.</ESCP_Spriggan_DebugAttackChance>
+	
+	<!-- Incidents -->
+	<ESCP_Spriggan_SprigganAttack_Label>spriggan attack</ESCP_Spriggan_SprigganAttack_Label>
+	<ESCP_Spriggan_SprigganAttack_Description>due to local deforestation, or possibly some other disturbance, local spriggan have turned manhunter, and are seeking out who they believe have defiled nature.</ESCP_Spriggan_SprigganAttack_Description>
+
+	<ESCP_Spriggan_SprigganChopAttack_Label>spriggan disturbed</ESCP_Spriggan_SprigganChopAttack_Label>
+	<ESCP_Spriggan_SprigganChopAttack_Description>The felling of a tree has disturbed a nearby spriggan. It will now seek out those who dare defile nature.</ESCP_Spriggan_SprigganChopAttack_Description>
+
+	<ESCP_AnimalWandersIn_Label>{0} wanders in</ESCP_AnimalWandersIn_Label>
+    <ESCP_AnimalWandersIn_Description>A {0} has wandered into the area. You may kill it, or attempt to tame it.</ESCP_AnimalWandersIn_Description>
+
+</LanguageData>

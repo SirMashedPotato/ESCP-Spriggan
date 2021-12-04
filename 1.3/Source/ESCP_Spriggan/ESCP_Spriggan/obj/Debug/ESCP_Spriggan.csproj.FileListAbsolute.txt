@@ -1,0 +1,4 @@
+J:\Modding\Github\ESCP-Spriggan\1.3\Assemblies\ESCP_Spriggan.dll
+J:\Modding\Github\ESCP-Spriggan\1.3\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.csprojAssemblyReference.cache
+J:\Modding\Github\ESCP-Spriggan\1.3\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.csproj.CoreCompileInputs.cache
+J:\Modding\Github\ESCP-Spriggan\1.3\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.dll
