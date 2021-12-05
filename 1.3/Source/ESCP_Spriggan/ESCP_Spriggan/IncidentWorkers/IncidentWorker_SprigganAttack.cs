@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace ESCP_Spriggan
 {
-	public class ESCP_Spriggan_SprigganAttack : IncidentWorker
+	public class IncidentWorker_SprigganAttack : IncidentWorker
 	{
 		protected override bool CanFireNowSub(IncidentParms parms)
 		{
