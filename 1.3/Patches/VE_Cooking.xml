@@ -40,7 +40,7 @@
 						<ThingDef ParentName="MealBase">
 							<defName>ESCP_SprigganCheese</defName>
 							<label>spriggan sap cheese</label>
-							<description>A pungent and spicy cheese, made from spriggan sap. It easily crumbles into a rough powder.</description>
+							<description>A pungent and spicy cheese, made from spriggan sap. It easily crumbles to the touch, often leaving one with a pile of cheese dust.</description>
 							<graphicData>
 								<texPath>Things/Items/Cheese/ESCP_SprigganSapCheese</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
@@ -82,7 +82,7 @@
 					<success>Always</success>
 					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_CheesePressFirstItem"]/items</xpath>
 					<value>
-						<li>MorrowRim_TrollBlood</li>
+						<li>ESCP_SprigganSap</li>	<!-- maybe need to change defname -->
 					</value>
 				</li>
 				
