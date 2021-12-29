@@ -66,7 +66,7 @@ namespace ESCP_Spriggan
         //for big boy attack
         public static void TriggerAttack(Map map)
         {
-            Log.Message("Attack triggered on map: " + map);
+            //Log.Message("Attack triggered on map: " + map);
             IncidentDef def = IncidentDefOf.ESCP_Spriggan_SprigganAttack;
             IncidentParms parms = StorytellerUtility.DefaultParmsNow(def.category, map);
             parms.forced = true;
