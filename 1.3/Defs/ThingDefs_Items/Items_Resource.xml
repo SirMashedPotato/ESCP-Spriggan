@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ESCP_SprigganSap</defName>
+		<label>spriggan sap</label>
+		<description>Special sap harvested from a spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSap</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <MarketValue>2</MarketValue>
+		  <Mass>0.02</Mass>
+		  <Flammability>0.0</Flammability>
+		  <DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+		  <li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!-- Base taproot, also base taproot -->
+	
+	<ThingDef ParentName="ResourceBase" Name="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot</defName>
+		<label>taproot</label>
+		<description>Taproot harvested from a standard spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/Taproot</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <MarketValue>35</MarketValue>
+		  <Mass>0.02</Mass>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+		  <li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+		  <li>AnimalPart</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<!-- Specific taproots -->
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Anima</defName>
+		<label>anima taproot</label>
+		<description>Taproot harvested from an anima spriggan. Sells for quite an ample pouch of coin, due to its rarity.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/AnimaTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>80</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Bog</defName>
+		<label>bog taproot</label>
+		<description>Taproot harvested from a bog spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/BogTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>40</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Burnt</defName>
+		<label>burnt taproot</label>
+		<description>Taproot harvested from a burnt spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/BurntTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>40</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Matron</defName>
+		<label>matron taproot</label>
+		<description>Taproot harvested from a spriggan matron.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/MatronTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>55</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Mother</defName>
+		<label>earth mother taproot</label>
+		<description>Taproot harvested from an earth mother spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/MotherTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>60</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Parasol</defName>
+		<label>parasol taproot</label>
+		<description>Taproot harvested from a parasol spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/ParasolTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>40</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Thorni</defName>
+		<label>thorny taproot</label>
+		<description>Taproot harvested from a thorny spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/ThorniTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>40</MarketValue>
+		</statBases>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTaprootBase">
+		<defName>ESCP_SprigganTaproot_Tundra</defName>
+		<label>tundra taproot</label>
+		<description>Taproot harvested from a tundra spriggan.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_Taproot/TundraTaproot</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>45</MarketValue>
+		</statBases>
+	</ThingDef>
+
+</Defs>

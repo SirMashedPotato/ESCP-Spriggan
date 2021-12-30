@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MVCF.ModDef>
+		<defName>ESCP_Spriggans_MVCF</defName>
+		<label>ESCP - Spriggans</label>
+		<description>Enables ranged attacks for specific spriggans</description>
+		<Features>
+			<RangedAnimals>true</RangedAnimals>
+			<HediffVerbs>false</HediffVerbs>
+			<IntegratedToggle>true</IntegratedToggle>
+		</Features>
+	</MVCF.ModDef>
+	
+</Defs>
