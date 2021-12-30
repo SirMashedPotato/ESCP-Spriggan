@@ -15,7 +15,7 @@
 	
 	<ESCP_Spriggan_InitialAttackChance>The initial chance that a spriggan attack occurs when a tree is cut down.</ESCP_Spriggan_InitialAttackChance>
 	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
-	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance decreases every 5,000 world comp ticks.</ESCP_Spriggan_DecreasedAttackChance>
+	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance decreases per in game day.</ESCP_Spriggan_DecreasedAttackChance>
 	
 	<ESCP_Spriggan_DebugAttackChance>[DEV] Print the current attack chance in the devlog whenever the chance is modified.</ESCP_Spriggan_DebugAttackChance>
 	

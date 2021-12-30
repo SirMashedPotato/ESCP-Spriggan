@@ -26,7 +26,7 @@ namespace ESCP_Spriggan
         private static readonly bool ESCP_Spriggan_ResetAttackChance_def = true;
         private static readonly float ESCP_Spriggan_InitialAttackChance_def = 0.01f;
         private static readonly float ESCP_Spriggan_IncreasedAttackChance_def = 0.01f;
-        private static readonly float ESCP_Spriggan_DecreasedAttackChance_def = 0.01f;
+        private static readonly float ESCP_Spriggan_DecreasedAttackChance_def = 0.1f;
 
         private static readonly bool ESCP_Spriggan_DebugAttackChance_def = false;
 

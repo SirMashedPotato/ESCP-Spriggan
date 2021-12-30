@@ -17,7 +17,7 @@ namespace ESCP_Spriggan
             base.WorldComponentTick();
             if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
             {
-                if (currentTicks >= targetTicks)
+                if (currentTicks++ >= targetTicks)
                 {
                     if (currentAttackChance > 0f)
                     {
@@ -25,9 +25,7 @@ namespace ESCP_Spriggan
                     }
                     currentTicks = 0;
                 }
-                currentTicks++;
             }
-
         }
 
         public override void ExposeData()
@@ -75,7 +73,7 @@ namespace ESCP_Spriggan
 
 
         private int currentTicks = 0;
-        private readonly int targetTicks = 5000;
+        private readonly int targetTicks = 60000;   //should be a day
         public static float currentAttackChance = ModSettings_Utility.ESCP_Spriggan_InitialAttackChance();
     }
 }
