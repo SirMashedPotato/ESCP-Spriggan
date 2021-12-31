@@ -88,9 +88,9 @@
 			<baseBodySize>1.25</baseBodySize>
 			<wildness>0.85</wildness>
 			<wildBiomes>
-				<TemperateForest>0.03</TemperateForest>
-				<BorealForest>0.03</BorealForest>
-				<TropicalRainforest>0.02</TropicalRainforest>
+				<TemperateForest>0.015</TemperateForest>
+				<BorealForest>0.015</BorealForest>
+				<TropicalRainforest>0.01</TropicalRainforest>
 			</wildBiomes>
 		</race>
 	</ThingDef>

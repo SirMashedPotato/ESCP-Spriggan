@@ -15,50 +15,66 @@ namespace ESCP_Spriggan
 			}
 		}
 
+        public bool takingAgeDamage = false;
+
+        public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
+        {
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            base.PostPostApplyDamage(dinfo, totalDamageDealt);
+        }
+
+        public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
+        {
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            base.PostPreApplyDamage(dinfo, out absorbed);
+        }
+
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            //check smol attack
-            if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
+            if (!takingAgeDamage)
             {
-                if(Props.overrideList != null)
+                //check smol attack
+                if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
                 {
-                    foreach(Overrides ov in Props.overrideList)
+                    if (Props.overrideList != null)
                     {
-                        if(parent.def.ToString() == ov.treeDefName)
+                        foreach (Overrides ov in Props.overrideList)
                         {
-                            if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                            if (parent.def.ToString() == ov.treeDefName)
                             {
-                                SpawnAngrySpriggan(previousMap, parent, PawnKindDef.Named(ov.kindDefName));
-                                base.PostDestroy(mode, previousMap);
-                                return;
+                                if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                                {
+                                    SpawnAngrySpriggan(previousMap, parent, PawnKindDef.Named(ov.kindDefName));
+                                    base.PostDestroy(mode, previousMap);
+                                    return;
+                                }
+                                break;
                             }
-                            break;
+                        }
+                    }
+
+                    if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                    {
+                        SpawnAngrySpriggan(previousMap, parent);
+                        base.PostDestroy(mode, previousMap);
+                        return;
+                    }
+                }
+
+                //check the big boy attack last
+                if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
+                {
+                    WorldComponent_SprigganAttackTracker.IncreaseChance();
+                    if (Rand.Chance(WorldComponent_SprigganAttackTracker.GetChance()))
+                    {
+                        TriggerAttack(previousMap);
+                        if (ModSettings_Utility.ESCP_Spriggan_ResetAttackChance())
+                        {
+                            WorldComponent_SprigganAttackTracker.ResetChance();
                         }
                     }
                 }
-
-                if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
-                {
-                    SpawnAngrySpriggan(previousMap, parent);
-                    base.PostDestroy(mode, previousMap);
-                    return;
-                }
             }
-
-            //check the big boy attack last
-            if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
-            {
-                WorldComponent_SprigganAttackTracker.IncreaseChance();
-                if (Rand.Chance(WorldComponent_SprigganAttackTracker.GetChance()))
-                {
-                    TriggerAttack(previousMap);
-                    if (ModSettings_Utility.ESCP_Spriggan_ResetAttackChance())
-                    {
-                        WorldComponent_SprigganAttackTracker.ResetChance();
-                    }
-                }
-            }
-
 
             base.PostDestroy(mode, previousMap);
         }

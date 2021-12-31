@@ -89,18 +89,18 @@
 			<baseBodySize>1.4</baseBodySize>
 			<wildness>0.90</wildness>
 			<wildBiomes>
-				<TemperateForest>0.015</TemperateForest>
-				<BorealForest>0.015</BorealForest>
-				<TropicalRainforest>0.015</TropicalRainforest>
-				<Tundra>0.015</Tundra>
-				<ColdBog>0.015</ColdBog>
-				<AridShrubland>0.015</AridShrubland>
-				<Desert>0.015</Desert>
-				<TropicalSwamp>0.015</TropicalSwamp>
-				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.015</MorrowRim_AshSwamp>
-				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.015</MorrowRim_Ashlands>
-				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.015</MorrowRim_VolcanicAshlands>
-				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.015</MorrowRim_Grazelands>
+				<TemperateForest>0.005</TemperateForest>
+				<BorealForest>0.005</BorealForest>
+				<TropicalRainforest>0.005</TropicalRainforest>
+				<Tundra>0.005</Tundra>
+				<ColdBog>0.005</ColdBog>
+				<AridShrubland>0.005</AridShrubland>
+				<Desert>0.005</Desert>
+				<TropicalSwamp>0.005</TropicalSwamp>
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.005</MorrowRim_AshSwamp>
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.005</MorrowRim_Ashlands>
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.005</MorrowRim_VolcanicAshlands>
+				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.005</MorrowRim_Grazelands>
 			</wildBiomes>
 		</race>
 	</ThingDef>
