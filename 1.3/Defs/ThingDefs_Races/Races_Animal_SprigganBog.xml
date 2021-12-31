@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan_Bog</defName>
+		<label>bog spriggan</label>
+		<description>TODO</description>
+		<statBases>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tools Inherit="False">
+		  <!-- hands -->
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			  <li>ScratchToxic</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			  <li>ScratchToxic</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <!-- head -->
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		</comps>
+		<race>
+			<wildBiomes>
+				<ColdBog>0.05</ColdBog>
+				<TemperateSwamp>0.07</TemperateSwamp>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.07</MorrowRim_AshSwamp>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<defName>ESCP_Spriggan_Bog</defName>
+		<label>bog spriggan</label>
+		<race>ESCP_Spriggan_Bog</race>
+		<lifeStages>
+		  <li>
+			<label>bog spriggan sproutling</label>
+			<labelPlural>bog spriggan sproutlings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>bog spriggan sapling</label>
+			<labelPlural>bog spriggan saplings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.3, 0.3)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			</dessicatedBodyGraphicData>
+			<butcherBodyPart>
+				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+				<thing>ESCP_SprigganTaproot_Bog</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

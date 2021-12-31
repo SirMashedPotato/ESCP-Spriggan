@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan_EarthMother</defName>
+		<label>spriggan earth mother</label>
+		<description>TODO</description>
+		<statBases>
+			<MoveSpeed>4.4</MoveSpeed>
+			<ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<MarketValue>650</MarketValue>
+		</statBases>
+		<tools Inherit="False">
+		  <!-- hands -->
+		  <li>
+			<label>fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>16</power>
+			<cooldownTime>1.5</cooldownTime>
+			<linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>18</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>18</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>18</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <!-- head -->
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>5</milkIntervalDays>
+				<milkAmount>18</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+		</comps>
+		<race>
+			<baseBodySize>1.4</baseBodySize>
+			<wildness>0.90</wildness>
+			<wildBiomes>
+				<TemperateForest>0.015</TemperateForest>
+				<BorealForest>0.015</BorealForest>
+				<TropicalRainforest>0.015</TropicalRainforest>
+				<Tundra>0.015</Tundra>
+				<ColdBog>0.015</ColdBog>
+				<AridShrubland>0.015</AridShrubland>
+				<Desert>0.015</Desert>
+				<TropicalSwamp>0.015</TropicalSwamp>
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.015</MorrowRim_AshSwamp>
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.015</MorrowRim_Ashlands>
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.015</MorrowRim_VolcanicAshlands>
+				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.015</MorrowRim_Grazelands>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<defName>ESCP_Spriggan_EarthMother</defName>
+		<label>spriggan earth mother</label>
+		<race>ESCP_Spriggan_EarthMother</race>
+		<lifeStages>
+		  <li>
+			<label>spriggan earth mother sproutling</label>
+			<labelPlural>spriggan earth mother sproutlings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+			  <drawSize>1.4</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>spriggan earth mother sapling</label>
+			<labelPlural>spriggan earth mother saplings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+			  <drawSize>1.6</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.3, 0.3)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.6</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+			  <drawSize>1.8</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.8</drawSize>
+			</dessicatedBodyGraphicData>
+			<butcherBodyPart>
+				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+				<thing>ESCP_SprigganTaproot_Mother</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

@@ -2,43 +2,53 @@
 <Defs>
 
 	<ThingDef ParentName="ESCP_SprigganThingBase">
-		<defName>ESCP_Spriggan</defName>
-		<label>spriggan</label>
+		<defName>ESCP_Spriggan_Thorni</defName>
+		<label>thorny spriggan</label>
 		<description>TODO</description>
 		<statBases>
+			<MoveSpeed>4.9</MoveSpeed>
+			<ComfyTemperatureMax>75</ComfyTemperatureMax>
 		</statBases>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>3</milkIntervalDays>
+				<milkAmount>5</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+		</comps>
 		<race>
+			<baseBodySize>0.6</baseBodySize>
 			<wildBiomes>
-				<TemperateForest>0.07</TemperateForest>
-				<BorealForest>0.07</BorealForest>
-				<TropicalRainforest>0.07</TropicalRainforest>
+				<AridShrubland>0.07</AridShrubland>
+				<Desert>0.05</Desert>
 			</wildBiomes>
 		</race>
 	</ThingDef>
 
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
-		<defName>ESCP_Spriggan</defName>
-		<label>spriggan</label>
-		<race>ESCP_Spriggan</race>
+		<defName>ESCP_Spriggan_Thorni</defName>
+		<label>thorny spriggan</label>
+		<race>ESCP_Spriggan_Thorni</race>
 		<lifeStages>
 		  <li>
-			<label>spriggan sproutling</label>
-			<labelPlural>spriggan sproutlings</labelPlural>
+			<label>thorny spriggan sproutling</label>
+			<labelPlural>thorny spriggan sproutlings</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
+			  <drawSize>0.6</drawSize>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
+			  <drawSize>0.6</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
-			<label>spriggan sapling</label>
-			<labelPlural>spriggan saplings</labelPlural>
+			<label>thorny spriggan sapling</label>
+			<labelPlural>thorny spriggan saplings</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
+			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
 				<offset>(0,0,-0.3)</offset>
@@ -46,13 +56,13 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
+			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
+			  <drawSize>1.0</drawSize>
 			  <shadowData>
 				<volume>(0.4, 0.4, 0.4)</volume>
 				<offset>(0,0,-0.1)</offset>
@@ -60,11 +70,11 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
+			  <drawSize>1.0</drawSize>
 			</dessicatedBodyGraphicData>
 			<butcherBodyPart>
 				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot</thing>
+				<thing>ESCP_SprigganTaproot_Thorni</thing>
 			</butcherBodyPart>
 		  </li>
 		</lifeStages>

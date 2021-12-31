@@ -3,7 +3,8 @@
 
   <ThoughtDef>
     <defName>ESCP_AnimaSprigganPsychicSoothe</defName>
-    <!--<workerClass>ThoughtWorker_PsychicEmanatorSoothe</workerClass>-->
+	<durationDays>1</durationDays>
+	<stackLimit>1</stackLimit>
     <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
     <stages>
       <li>

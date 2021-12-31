@@ -26,7 +26,7 @@ namespace ESCP_Spriggan
 		{
 			Map map = (Map)parms.target;
 			PawnKindDef pawnKind = SprigganUtility.GetSprigganType(map);
-			if ((pawnKind == null && !ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out pawnKind)) || ManhunterPackIncidentUtility.GetAnimalsCount(pawnKind, parms.points) == 0)
+			if (pawnKind == null || ManhunterPackIncidentUtility.GetAnimalsCount(pawnKind, parms.points) == 0)
 			{
 				return false;
 			}

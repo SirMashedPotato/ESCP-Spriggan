@@ -1,4 +1,6 @@
 ﻿using Verse;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ESCP_Spriggan
 {
@@ -6,15 +8,17 @@ namespace ESCP_Spriggan
     {
         public static PawnKindDef GetSprigganType(Map map)
         {
-            foreach(PawnKindDef kind in map.Biome.AllWildAnimals.InRandomOrder())
+            List<PawnKindDef> kinds = map.Biome.AllWildAnimals.Where(x => x.race.tradeTags != null && x.race.tradeTags.Contains("ESCP_Spriggan")).ToList();
+            if (!kinds.NullOrEmpty())
             {
-                if (kind.race.tradeTags != null && kind.race.tradeTags.Contains("ESCP_Spriggan"))
-                {
-                    return kind;
-                }
+                kinds.SortBy(x => map.Biome.CommonalityOfAnimal(x));
+                return kinds.RandomElementByWeightWithFallback(x => map.Biome.CommonalityOfAnimal(x)*100, kinds.ElementAt(0));
             }
-
-            return PawnKindDef.Named("ESCP_Spriggan");
+            if (ModSettings_Utility.ESCP_Spriggan_EnableDefaultType())
+            {
+                return PawnKindDef.Named("ESCP_Spriggan");
+            }
+            return null;
         }
     }
 }

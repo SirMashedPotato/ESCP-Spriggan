@@ -81,10 +81,13 @@ namespace ESCP_Spriggan
 
         public static void SpawnAngrySpriggan(Map map, Thing parent, PawnKindDef kindDef)
         {
-            Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
-            GenSpawn.Spawn(newP, parent.Position, map);
-            newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
-            Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, newP);
+            if(kindDef != null)
+            {
+                Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
+                GenSpawn.Spawn(newP, parent.Position, map);
+                newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+                Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, newP);
+            }
         }
     }
 }

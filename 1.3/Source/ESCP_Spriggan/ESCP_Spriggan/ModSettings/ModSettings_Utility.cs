@@ -48,6 +48,11 @@ namespace ESCP_Spriggan
             return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_DecreasedAttackChance;
         }
 
+        public static bool ESCP_Spriggan_EnableDefaultType()
+        {
+            return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_EnableDefaultType;
+        }
+
         //Debug
 
         public static bool ESCP_Spriggan_DebugAttackChance()

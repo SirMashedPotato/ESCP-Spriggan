@@ -17,11 +17,13 @@
 	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
 	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance decreases per in game day.</ESCP_Spriggan_DecreasedAttackChance>
 	
+	<ESCP_Spriggan_EnableDefaultType>Enable spriggan attacks defaulting to standard spriggans for biomes without assigned spriggans.</ESCP_Spriggan_EnableDefaultType>
+	
 	<ESCP_Spriggan_DebugAttackChance>[DEV] Print the current attack chance in the devlog whenever the chance is modified.</ESCP_Spriggan_DebugAttackChance>
 	
 	<!-- Incidents -->
 	<ESCP_Spriggan_SprigganAttack_Label>spriggan attack</ESCP_Spriggan_SprigganAttack_Label>
-	<ESCP_Spriggan_SprigganAttack_Description>due to local deforestation, or possibly some other disturbance, local spriggan have turned manhunter, and are seeking out who they believe have defiled nature.</ESCP_Spriggan_SprigganAttack_Description>
+	<ESCP_Spriggan_SprigganAttack_Description>Due to local deforestation, or possibly some other disturbance, local spriggan have turned manhunter, and are seeking out who they believe have defiled nature.</ESCP_Spriggan_SprigganAttack_Description>
 
 	<ESCP_Spriggan_SprigganChopAttack_Label>spriggan disturbed</ESCP_Spriggan_SprigganChopAttack_Label>
 	<ESCP_Spriggan_SprigganChopAttack_Description>The felling of a tree has disturbed a nearby spriggan. It will now seek out those who dare defile nature.</ESCP_Spriggan_SprigganChopAttack_Description>
