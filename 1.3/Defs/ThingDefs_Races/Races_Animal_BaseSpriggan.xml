@@ -135,7 +135,7 @@
 	<PawnKindDef ParentName="AnimalKindBase" Name="ESCP_SprigganKindBase" Abstract="True">
 		<combatPower>150</combatPower>
 		<ecoSystemWeight>0.50</ecoSystemWeight>
-		<wildGroupSize>1~2</wildGroupSize>
+		<wildGroupSize>1</wildGroupSize>
 	</PawnKindDef>
 
 </Defs>

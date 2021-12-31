@@ -86,6 +86,7 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>170</combatPower>
 		<defName>ESCP_Spriggan_Burnt</defName>
 		<label>burnt spriggan</label>
 		<race>ESCP_Spriggan_Burnt</race>

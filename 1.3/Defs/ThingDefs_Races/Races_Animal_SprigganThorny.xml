@@ -9,6 +9,55 @@
 			<MoveSpeed>4.9</MoveSpeed>
 			<ComfyTemperatureMax>75</ComfyTemperatureMax>
 		</statBases>
+		<tools Inherit="false">
+		  <!-- hands -->
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <!-- head -->
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
 		<comps>
 			<li Class="CompProperties_Milkable">
 				<milkDef>ESCP_SprigganSap</milkDef>
@@ -18,6 +67,7 @@
 			</li>
 		</comps>
 		<race>
+			<baseHealthScale>1.0</baseHealthScale>
 			<baseBodySize>0.6</baseBodySize>
 			<wildBiomes>
 				<AridShrubland>0.07</AridShrubland>
@@ -27,9 +77,11 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>50</combatPower>
 		<defName>ESCP_Spriggan_Thorni</defName>
 		<label>thorny spriggan</label>
 		<race>ESCP_Spriggan_Thorni</race>
+		<wildGroupSize>3</wildGroupSize>
 		<lifeStages>
 		  <li>
 			<label>thorny spriggan sproutling</label>

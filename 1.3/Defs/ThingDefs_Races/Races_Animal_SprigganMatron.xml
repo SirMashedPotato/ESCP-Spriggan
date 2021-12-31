@@ -96,6 +96,7 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>200</combatPower>
 		<defName>ESCP_Spriggan_Matron</defName>
 		<label>spriggan matron</label>
 		<race>ESCP_Spriggan_Matron</race>

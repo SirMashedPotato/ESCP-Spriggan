@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 using System;
+using System.Collections.Generic;
 
 namespace ESCP_Spriggan
 {
@@ -83,10 +84,20 @@ namespace ESCP_Spriggan
         {
             if(kindDef != null)
             {
-                Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
-                GenSpawn.Spawn(newP, parent.Position, map);
-                newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
-                Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, newP);
+                int avg = (int)kindDef.wildGroupSize.Average;   //basically just gets the wild group size, spawns that number in. This does mean you pretty much always want wild group size to be 1
+                List<Pawn> pawns = new List<Pawn> { }; 
+                for (int i = 0; i < avg; i++)
+                {
+                    Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
+                    GenSpawn.Spawn(newP, parent.Position, map);
+                    newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+                    pawns.Add(newP);
+                }
+                if (!pawns.NullOrEmpty())
+                {
+                    Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, pawns);
+
+                }
             }
         }
     }
