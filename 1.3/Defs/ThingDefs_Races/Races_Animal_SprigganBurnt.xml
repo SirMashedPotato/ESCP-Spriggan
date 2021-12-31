@@ -73,6 +73,26 @@
 			<chanceFactor>0.2</chanceFactor>
 		  </li>
 		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ESCP_SprigganFireball</defaultProjectile>
+				<warmupTime>1.8</warmupTime>
+				<range>19.9</range>
+				<soundCast>ESCP_Spriggan_Fireball</soundCast>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>false</canTargetLocations>
+				</targetParams>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<accuracyTouch>0.60</accuracyTouch>
+				<accuracyShort>0.80</accuracyShort>
+				<accuracyMedium>0.60</accuracyMedium>
+				<accuracyLong>0.30</accuracyLong>
+				<defaultCooldownTime>2.4</defaultCooldownTime>
+			</li>
+		</verbs>
 		<comps>
 		</comps>
 		<race>
@@ -139,5 +159,28 @@
 		  </li>
 		</lifeStages>
 	</PawnKindDef>
+	
+	<!-- Projectile -->
+	
+	<ThingDef>
+		<defName>ESCP_SprigganFireball</defName>
+		<tickerType>Normal</tickerType>
+		<thingClass>Bullet</thingClass>
+		<category>Projectile</category>
+		<label>spriggan fireball</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Projectile/ESCP_FireBall</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>0.3</stoppingPower>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>
 
 </Defs>
