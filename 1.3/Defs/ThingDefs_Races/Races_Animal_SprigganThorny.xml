@@ -36,11 +36,11 @@
 			<labelPlural>thorny spriggan sproutlings</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
-			  <drawSize>0.6</drawSize>
+			  <drawSize>0.5</drawSize>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>0.6</drawSize>
+			  <drawSize>0.5</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
@@ -48,7 +48,7 @@
 			<labelPlural>thorny spriggan saplings</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
-			  <drawSize>0.8</drawSize>
+			  <drawSize>0.7</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
 				<offset>(0,0,-0.3)</offset>
@@ -56,13 +56,13 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>0.8</drawSize>
+			  <drawSize>0.7</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ThorniSpriggan</texPath>
-			  <drawSize>1.0</drawSize>
+			  <drawSize>0.9</drawSize>
 			  <shadowData>
 				<volume>(0.4, 0.4, 0.4)</volume>
 				<offset>(0,0,-0.1)</offset>
@@ -70,7 +70,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
+			  <drawSize>0.9</drawSize>
 			</dessicatedBodyGraphicData>
 			<butcherBodyPart>
 				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>

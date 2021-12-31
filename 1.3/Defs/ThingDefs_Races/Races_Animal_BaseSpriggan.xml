@@ -68,7 +68,7 @@
 		</tools>
 		<comps>
 			<li Class="ESCP_Spriggan.CompProperties_SprigganRegeneration">
-				<minHealth>0.4</minHealth>
+				<minPain>0.8</minPain>
 				<Severity>1</Severity>
 				<hediff>ESCP_SprigganRegen</hediff>
 			  </li>
