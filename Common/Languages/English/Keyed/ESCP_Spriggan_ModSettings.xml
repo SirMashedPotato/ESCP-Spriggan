@@ -20,7 +20,6 @@
 	<ESCP_Spriggan_EnableDefaultType>Enable spriggan attacks defaulting to standard spriggans for biomes without assigned spriggans.</ESCP_Spriggan_EnableDefaultType>
 	<ESCP_Spriggan_EnableAnimalControl>Enable wild spriggans controlling wild animals when enraged.</ESCP_Spriggan_EnableAnimalControl>
 	<ESCP_Spriggan_EnableRegen>Enable spriggans gaining enhanced wound regeneration when their pain is high enough.</ESCP_Spriggan_EnableRegen>
-	<ESCP_Spriggan_EnableRevive>Enable spriggans resurrecting up-to three times.</ESCP_Spriggan_EnableRevive>
 	
 	<ESCP_Spriggan_DebugAttackChance>[DEV] Print the current attack chance in the devlog whenever the chance is modified.</ESCP_Spriggan_DebugAttackChance>
 	

@@ -54,5 +54,5 @@ namespace ESCP_Spriggan
 			}
 			else ticks++;
 		}
-	}
+    }
 }
