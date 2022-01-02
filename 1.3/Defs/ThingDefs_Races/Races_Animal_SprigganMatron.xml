@@ -91,6 +91,19 @@
 				<TemperateForest>0.015</TemperateForest>
 				<BorealForest>0.015</BorealForest>
 				<TropicalRainforest>0.01</TropicalRainforest>
+				<!-- Biomes! -->
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.015</BiomesIslands_TemperateIsland>
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.015</BiomesIslands_TemperateArchipelago>
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.015</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.015</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TropicalIsland>
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TropicalArchipelago>
+				<!-- Regrowth -->
+				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.015</RG-AF_AspenForest>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.015</ZBiome_AlpineMeadow>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.015</ZBiome_CloudForest>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.015</ZBiome_CoastalDunes>
 			</wildBiomes>
 		</race>
 	</ThingDef>

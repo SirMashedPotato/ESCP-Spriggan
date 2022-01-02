@@ -16,6 +16,20 @@
 				<TropicalSwamp>0.04</TropicalSwamp>
 				<Tundra>0.05</Tundra>
 				<ColdBog>0.04</ColdBog>
+				<!-- Biomes! -->
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_Atoll>
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateIsland>
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateArchipelago>
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalIsland>
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalArchipelago>
+				<!-- Regrowth -->
+				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.07</RG-AF_AspenForest>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_AlpineMeadow>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CloudForest>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CoastalDunes>
 			</wildBiomes>
 		</race>
 	</ThingDef>

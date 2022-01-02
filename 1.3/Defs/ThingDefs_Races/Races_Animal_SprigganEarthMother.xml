@@ -97,10 +97,39 @@
 				<AridShrubland>0.005</AridShrubland>
 				<Desert>0.005</Desert>
 				<TropicalSwamp>0.005</TropicalSwamp>
+				<!-- MorrowRim -->
 				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.005</MorrowRim_AshSwamp>
 				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.005</MorrowRim_Ashlands>
 				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.005</MorrowRim_VolcanicAshlands>
 				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.005</MorrowRim_Grazelands>
+				<!-- Biomes! -->
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TemperateIsland>
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TemperateArchipelago>
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TropicalIsland>
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TropicalArchipelago>
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_DesertIsland>
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_DesertArchipelago>
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TundraIsland>
+				<BiomesIslands_TundraArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TundraArchipelago>
+				<!-- Regrowth -->
+				<RG-VIS_VulcanicIceSheet MayRequire="ReGrowth.BOTR.VolcanicIceSheet">0.005</RG-VIS_VulcanicIceSheet>
+				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.005</RG-AF_AspenForest>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_AlpineMeadow>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CloudForest>
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_DesertOasis>
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_Marsh>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CoastalDunes>
+				<!-- Alpha Biomes -->
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.005</AB_PyroclasticConflagration>
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.005</AB_GallatrossGraveyard>
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.005</AB_TarPits>
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.005</AB_PropaneLakes>
+				<!-- Advanced Biomes -->
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.005</Volcano>
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.005</Wetland>
 			</wildBiomes>
 		</race>
 	</ThingDef>

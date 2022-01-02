@@ -16,7 +16,7 @@ namespace ESCP_Spriggan
             }
             if (ModSettings_Utility.ESCP_Spriggan_EnableDefaultType())
             {
-                return PawnKindDef.Named("ESCP_Spriggan");
+                return Rand.Chance(0.05f) ? (Rand.Chance(0.15f) ? PawnKindDef.Named("ESCP_Spriggan_EarthMother") : PawnKindDef.Named("ESCP_Spriggan_Matron")) : PawnKindDef.Named("ESCP_Spriggan");
             }
             return null;
         }

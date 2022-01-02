@@ -93,6 +93,17 @@
 				<BorealForest>0.05</BorealForest>
 				<Tundra>0.03</Tundra>
 				<ColdBog>0.02</ColdBog>
+				<!-- Biomes! -->
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TundraIsland>
+				<BiomesIslands_TundraArchipelago MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TundraArchipelago>
+				<!-- Regrowth -->
+				<RG-VIS_VulcanicIceSheet MayRequire="ReGrowth.BOTR.VolcanicIceSheet">0.03</RG-VIS_VulcanicIceSheet>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_AlpineMeadow>
+				<!-- Alpha Biomes -->
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.07</AB_PropaneLakes>
 			</wildBiomes>
 		</race>
 	</ThingDef>

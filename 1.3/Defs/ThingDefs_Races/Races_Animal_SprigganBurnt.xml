@@ -98,9 +98,17 @@
 		<race>
 			<deathActionWorkerClass>ESCP_Spriggan.DeathActionWorker_BurntSpriggan</deathActionWorkerClass>
 			<wildBiomes>
+				<!-- Naturally occuring in MorrowRim biomes, but also appears from burnt trees in every biome -->
 				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.025</MorrowRim_Ashlands>
 				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.025</MorrowRim_BlightedAshlands>
 				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.05</MorrowRim_VolcanicAshlands>
+				<!-- Regrowth -->
+				<RG-W_Wasteland MayRequire="ReGrowth.BOTR.Wastelands">0.025</RG-W_Wasteland>
+				<!-- Alpha Biomes -->
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.05</AB_PyroclasticConflagration>
+				<!-- Advanced Biomes -->
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.05</Volcano>
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.05</Wasteland>
 			</wildBiomes>
 		</race>
 	</ThingDef>

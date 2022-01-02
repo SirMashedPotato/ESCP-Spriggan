@@ -72,6 +72,15 @@
 			<wildBiomes>
 				<AridShrubland>0.07</AridShrubland>
 				<Desert>0.05</Desert>
+				<!-- Biomes! -->
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.07</BMT_ChromaticOasis>
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_DesertIsland>
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_DesertArchipelago>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_DesertOasis>
+				<!-- Alpha Biomes -->
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.07</AB_GallatrossGraveyard>
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.07</AB_TarPits>
 			</wildBiomes>
 		</race>
 	</ThingDef>
