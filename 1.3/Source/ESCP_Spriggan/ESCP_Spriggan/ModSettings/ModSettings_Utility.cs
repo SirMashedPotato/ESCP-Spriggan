@@ -58,6 +58,16 @@ namespace ESCP_Spriggan
             return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_EnableAnimalControl;
         }
 
+        public static bool ESCP_Spriggan_EnableRegen()
+        {
+            return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_EnableRegen;
+        }
+
+        public static bool ESCP_Spriggan_EnableRevive()
+        {
+            return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_EnableRevive;
+        }
+
         //Debug
 
         public static bool ESCP_Spriggan_DebugAttackChance()

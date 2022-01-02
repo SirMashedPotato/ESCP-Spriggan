@@ -60,6 +60,18 @@
 		  </li>
 		</tools>
 		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>5</milkIntervalDays>
+				<milkAmount>10</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
+				<maxRange>10</maxRange>
+				<maxNumberControlled>1</maxNumberControlled>
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+				<soundDef>PsychicInsanityLanceCast</soundDef>
+			</li>
 		</comps>
 		<race>
 			<wildBiomes>

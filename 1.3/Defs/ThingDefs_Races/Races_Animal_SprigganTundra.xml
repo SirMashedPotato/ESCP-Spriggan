@@ -84,6 +84,12 @@
 				<milkAmount>18</milkAmount>
 				<milkFemaleOnly>false</milkFemaleOnly>
 			</li>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
+				<maxRange>10</maxRange>
+				<maxNumberControlled>1</maxNumberControlled>
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+				<soundDef>PsychicInsanityLanceCast</soundDef>
+			</li>
 		</comps>
 		<race>
 			<baseBodySize>2.2</baseBodySize>

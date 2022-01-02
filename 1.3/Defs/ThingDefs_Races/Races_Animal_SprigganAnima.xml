@@ -21,7 +21,8 @@
 				<thoughtDef>ESCP_AnimaSprigganPsychicSoothe</thoughtDef>
 			</li>
 			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
-				<maxRange>10</maxRange>
+				<maxRange>20</maxRange>	<!-- increased coimpared to other spriggans -->
+				<maxNumberControlled>1</maxNumberControlled>
 				<fleckDef>PsycastPsychicEffect</fleckDef>
 				<soundDef>PsychicInsanityLanceCast</soundDef>
 			</li>

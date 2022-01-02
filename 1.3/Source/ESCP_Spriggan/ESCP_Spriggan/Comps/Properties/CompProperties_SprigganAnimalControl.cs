@@ -9,6 +9,8 @@ namespace ESCP_Spriggan
 			this.compClass = typeof(Comp_SprigganAnimalControl);
 		}
 		public float maxRange = 10f;
+		public int maxNumberControlled = 1;
+		public float chance = 1f;
 		public FleckDef fleckDef;
 		public SoundDef soundDef;
 	}

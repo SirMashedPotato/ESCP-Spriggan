@@ -52,7 +52,16 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_DecreasedAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_DecreasedAttackChance, 0f, 1f) * 100) / 100;
             listing_Standard.Gap();
 
+            listing_Standard.GapLine();
+            listing_Standard.Gap();
+
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAnimalControl".Translate(), ref settings.ESCP_Spriggan_EnableAnimalControl);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableRegen".Translate(), ref settings.ESCP_Spriggan_EnableRegen);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableRevive".Translate(), ref settings.ESCP_Spriggan_EnableRevive);
             listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableDefaultType".Translate(), ref settings.ESCP_Spriggan_EnableDefaultType);

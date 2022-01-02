@@ -20,16 +20,16 @@ namespace ESCP_Spriggan
             }
         }
 
-        private bool activated = false;
+        private int timesActivated = 0;
 
         public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
 
-            if (!activated && parent.Spawned && ModSettings_Utility.ESCP_Spriggan_EnableAnimalControl())
+            if (parent.Spawned && ModSettings_Utility.ESCP_Spriggan_EnableAnimalControl() && timesActivated < Props.maxNumberControlled && Rand.Chance(Props.chance))
             {
                 Pawn p = parent as Pawn;
-                if (!p.Dead && p.Faction == null)
+                if (!p.Dead && p.Faction == null && dinfo.Instigator != null && dinfo.Instigator.def != null && dinfo.Instigator.def.race != null && dinfo.Instigator.def.race.Humanlike)
                 {
                     Predicate<Thing> predicate = (Thing t) => t.def.category == ThingCategory.Pawn && IsValid(t);
                     Thing animal = GenClosest.ClosestThingReachable(parent.Position, parent.Map, ThingRequest.ForGroup(ThingRequestGroup.Pawn), PathEndMode.OnCell,
@@ -48,7 +48,7 @@ namespace ESCP_Spriggan
                             Props.soundDef.PlayOneShot(new TargetInfo(parent.Position, parent.Map, false));
                         }
                         Messages.Message("ESCP_Spriggan_SpriganAnimalControlled".Translate(target.def.label), target, MessageTypeDefOf.NegativeEvent, true);
-                        activated = true;
+                        timesActivated++;
                     }
                 }
             }
@@ -57,13 +57,14 @@ namespace ESCP_Spriggan
         private bool IsValid(Thing t)
         {
             Pawn p = t as Pawn;
-            return p.AnimalOrWildMan() && p.Faction == null && (p.kindDef.race.tradeTags == null ||  !p.kindDef.race.tradeTags.Contains("ESCP_Spriggan"));
+            return p.AnimalOrWildMan() && p.Faction == null && p.mindState.mentalStateHandler.CurStateDef != MentalStateDefOf.Manhunter && p.mindState.mentalStateHandler.CurStateDef != MentalStateDefOf.ManhunterPermanent 
+                && (p.kindDef.race.tradeTags == null ||  !p.kindDef.race.tradeTags.Contains("ESCP_Spriggan"));
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref activated, "SprigganControlActivated", false);
+            Scribe_Values.Look(ref timesActivated, "SprigganAnimalsControlled", 0);
         }
     }
 }

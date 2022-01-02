@@ -85,6 +85,7 @@
 			</li>
 			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
 				<maxRange>10</maxRange>
+				<maxNumberControlled>3</maxNumberControlled>
 				<fleckDef>PsycastPsychicEffect</fleckDef>
 				<soundDef>PsychicInsanityLanceCast</soundDef>
 			</li>

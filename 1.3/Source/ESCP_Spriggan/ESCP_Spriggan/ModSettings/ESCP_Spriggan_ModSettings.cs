@@ -17,6 +17,8 @@ namespace ESCP_Spriggan
 
         public bool ESCP_Spriggan_EnableDefaultType = ESCP_Spriggan_EnableDefaultType_def;
         public bool ESCP_Spriggan_EnableAnimalControl = ESCP_Spriggan_EnableAnimalControl_def;
+        public bool ESCP_Spriggan_EnableRegen = ESCP_Spriggan_EnableRegen_def;
+        public bool ESCP_Spriggan_EnableRevive = ESCP_Spriggan_EnableRevive_def;
 
         public bool ESCP_Spriggan_DebugAttackChance = ESCP_Spriggan_DebugAttackChance_def;
 
@@ -33,6 +35,8 @@ namespace ESCP_Spriggan
 
         private static readonly bool ESCP_Spriggan_EnableDefaultType_def = true;
         private static readonly bool ESCP_Spriggan_EnableAnimalControl_def = true;
+        private static readonly bool ESCP_Spriggan_EnableRegen_def = true;
+        private static readonly bool ESCP_Spriggan_EnableRevive_def = false;
 
         private static readonly bool ESCP_Spriggan_DebugAttackChance_def = false;
 
@@ -51,6 +55,8 @@ namespace ESCP_Spriggan
 
             Scribe_Values.Look(ref ESCP_Spriggan_EnableDefaultType, "ESCP_Spriggan_EnableDefaultType", ESCP_Spriggan_EnableDefaultType_def);
             Scribe_Values.Look(ref ESCP_Spriggan_EnableAnimalControl, "ESCP_Spriggan_EnableAnimalControl", ESCP_Spriggan_EnableAnimalControl_def);
+            Scribe_Values.Look(ref ESCP_Spriggan_EnableRegen, "ESCP_Spriggan_EnableRegen", ESCP_Spriggan_EnableRegen_def);
+            Scribe_Values.Look(ref ESCP_Spriggan_EnableRevive, "ESCP_Spriggan_EnableRevive", ESCP_Spriggan_EnableRevive_def);
 
             Scribe_Values.Look(ref ESCP_Spriggan_DebugAttackChance, "ESCP_Spriggan_DebugAttackChance", ESCP_Spriggan_DebugAttackChance_def);
         }
@@ -69,6 +75,8 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_DebugAttackChance = ESCP_Spriggan_DebugAttackChance_def;
             settings.ESCP_Spriggan_EnableDefaultType = ESCP_Spriggan_EnableDefaultType_def;
             settings.ESCP_Spriggan_EnableAnimalControl = ESCP_Spriggan_EnableAnimalControl_def;
+            settings.ESCP_Spriggan_EnableRegen = ESCP_Spriggan_EnableRegen_def;
+            settings.ESCP_Spriggan_EnableRevive = ESCP_Spriggan_EnableRevive_def;
         }
     }
 }
