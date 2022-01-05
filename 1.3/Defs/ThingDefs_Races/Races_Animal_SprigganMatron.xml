@@ -5,6 +5,9 @@
 		<defName>ESCP_Spriggan_Matron</defName>
 		<label>spriggan matron</label>
 		<description>TODO</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTaproot_Matron</ThingDef>
+		</descriptionHyperlinks>
 		<statBases>
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.12</ArmorRating_Sharp>

@@ -5,7 +5,7 @@
 
 	<ThingDef ParentName="AnimalThingBase" Name="ESCP_SprigganThingBase" Abstract="True">
 		<statBases>
-		  <MoveSpeed>4.7</MoveSpeed>	<!-- Check pawn speed, this should be higher -->
+		  <MoveSpeed>4.7</MoveSpeed>
 		  <Flammability>1.4</Flammability>
 		  <PsychicSensitivity>1.5</PsychicSensitivity>
 		  <ToxicSensitivity>0</ToxicSensitivity>
@@ -74,18 +74,19 @@
 				<hediff>ESCP_SprigganRegen</hediff>
 			  </li>
 			  <!-- milkable comp in seperate defs -->
+			  <!-- animal control comp in seperate defs -->
 			  <li Class="AnimalBehaviours.CompProperties_FixedGender">
 				<gender>Female</gender>
 			  </li>
 			  <li Class="AnimalBehaviours.CompProperties_AutoNutrition">
 				<tickInterval>2000</tickInterval>
-				<consumingFoodReportString>Absorbing sunlight</consumingFoodReportString>		
+				<consumingFoodReportString>Absorbing energy</consumingFoodReportString>		
 			  </li>
 		</comps>
 		<race>
 		  <fleshType>ESCP_FleshSpriggan</fleshType>
 		  <bloodDef>ESCP_Filth_SprigganSap</bloodDef>
-		  <useMeatFrom>Muffalo</useMeatFrom>
+		  <useMeatFrom>Muffalo</useMeatFrom>	<!-- they don't actually give meat, but doing this avoids new meat defs getting added -->
 		  <body>ECP_Spriggan</body>
 		  <herdAnimal>false</herdAnimal>
 		  <predator>false</predator>

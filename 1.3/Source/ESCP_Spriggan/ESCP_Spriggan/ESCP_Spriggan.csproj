@@ -54,12 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\Comp_SprigganAnimalControl.cs" />
+    <Compile Include="Comps\Comp_SprigganSpawner.cs" />
     <Compile Include="Comps\HediffComp_SprigganRegeneration.cs" />
     <Compile Include="Comps\Properties\CompProperties_SpawnSprigganOnChop.cs" />
     <Compile Include="Comps\Properties\CompProperties_SprigganAnimalControl.cs" />
     <Compile Include="Comps\Properties\CompProperties_SprigganRegeneration.cs" />
     <Compile Include="Comps\Comp_SpawnSprigganOnChop.cs" />
     <Compile Include="Comps\Comp_SprigganRegeneration.cs" />
+    <Compile Include="Comps\Properties\CompProperties_SprigganSpawner.cs" />
     <Compile Include="Comps\Properties\HediffCompProperties_SprigganRegeneration.cs" />
     <Compile Include="DeathActionWorker_BurntSpriggan.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />

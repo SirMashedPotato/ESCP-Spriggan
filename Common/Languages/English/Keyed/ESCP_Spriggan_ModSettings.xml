@@ -30,9 +30,13 @@
 	<ESCP_Spriggan_SprigganChopAttack_Label>spriggan disturbed</ESCP_Spriggan_SprigganChopAttack_Label>
 	<ESCP_Spriggan_SprigganChopAttack_Description>The felling of a tree has disturbed a nearby spriggan. It will now seek out those who dare defile nature.</ESCP_Spriggan_SprigganChopAttack_Description>
 
-	<ESCP_Spriggan_SpriganAnimalControlled>A {0} has answered an enraged spriggans call for aid.</ESCP_Spriggan_SpriganAnimalControlled>
-
 	<ESCP_AnimalWandersIn_Label>{0} wanders in</ESCP_AnimalWandersIn_Label>
     <ESCP_AnimalWandersIn_Description>A {0} has wandered into the area. You may kill it, or attempt to tame it.</ESCP_AnimalWandersIn_Description>
+
+	<!-- Notifications -->
+	<ESCP_Spriggan_SpriganAnimalControlled>A {0} has answered an enraged spriggans call for aid.</ESCP_Spriggan_SpriganAnimalControlled>
+	<ESCP_Spriggan_SpriganCreated>A new {0} has emerged from a {1}.</ESCP_Spriggan_SpriganCreated>
+	<ESCP_Spriggan_SpriganCreationProgress>{0}% progress until {1} emerges</ESCP_Spriggan_SpriganCreationProgress>
+	<ESCP_Spriggan_SpriganCreation_Immature>{0} will begin forming once the {1} is mature</ESCP_Spriggan_SpriganCreation_Immature>
 
 </LanguageData>
