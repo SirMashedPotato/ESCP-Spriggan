@@ -62,7 +62,7 @@
 		  <texPath>Things/Plant/ESCP_SprigganTree/Spriggan</texPath>
 		</graphicData>
 		<plant>
-			<growDays>60</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
 			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Spriggan_Leafless</leaflessGraphicPath>
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Spriggan_Immature</immatureGraphicPath>
 		</plant>
@@ -86,7 +86,7 @@
 		  <texPath>Things/Plant/ESCP_SprigganTree/Bog</texPath>
 		</graphicData>
 		<plant>
-			<growDays>60</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
 			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Bog_Leafless</leaflessGraphicPath>-->
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Bog_Immature</immatureGraphicPath>
 		</plant>
@@ -110,7 +110,7 @@
 		  <texPath>Things/Plant/ESCP_SprigganTree/Matron</texPath>
 		</graphicData>
 		<plant>
-			<growDays>90</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>45</growDays>	<!-- lose one full 'harvests' -->
 			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Matron_Leafless</leaflessGraphicPath>
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Matron_Immature</immatureGraphicPath>
 		</plant>
@@ -134,7 +134,7 @@
 		  <texPath>Things/Plant/ESCP_SprigganTree/Mother</texPath>
 		</graphicData>
 		<plant>
-			<growDays>120</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>60</growDays>	<!-- lose one full 'harvests' -->
 			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Mother_Leafless</leaflessGraphicPath>
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Mother_Immature</immatureGraphicPath>
 		</plant>
@@ -161,7 +161,7 @@
 			<dieIfNoSunlight>false</dieIfNoSunlight>
 			<dieIfLeafless>false</dieIfLeafless>
 			<growMinGlow>0</growMinGlow>
-			<growDays>60</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
 			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Parasol_Leafless</leaflessGraphicPath>-->
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Parasol_Immature</immatureGraphicPath>
 		</plant>
@@ -186,7 +186,7 @@
 		</graphicData>
 		<plant>
 			<visualSizeRange>0.5~2.5</visualSizeRange>
-			<growDays>30</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>15</growDays>	<!-- lose one full 'harvests' -->
 			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Thorni_Leafless</leaflessGraphicPath>-->
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Thorni_Immature</immatureGraphicPath>
 		</plant>
@@ -211,7 +211,7 @@
 		</graphicData>
 		<plant>
 			<visualSizeRange>3~7</visualSizeRange>
-			<growDays>120</growDays>	<!-- lose two full 'harvests' -->
+			<growDays>60</growDays>	<!-- lose one full 'harvests' -->
 			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Tundra_Leafless</leaflessGraphicPath>-->
 			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Tundra_Immature</immatureGraphicPath>
 		</plant>
