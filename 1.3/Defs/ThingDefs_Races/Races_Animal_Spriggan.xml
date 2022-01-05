@@ -7,6 +7,7 @@
 		<description>TODO</description>
 		<descriptionHyperlinks>
 			<ThingDef>ESCP_SprigganTaproot</ThingDef>
+			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree</ThingDef>
 		</descriptionHyperlinks>
 		<statBases>
 		</statBases>

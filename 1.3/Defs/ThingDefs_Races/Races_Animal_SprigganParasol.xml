@@ -7,6 +7,7 @@
 		<description>TODO</description>
 		<descriptionHyperlinks>
 			<ThingDef>ESCP_SprigganTaproot_Parasol</ThingDef>
+			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree_Parasol</ThingDef>
 		</descriptionHyperlinks>
 		<statBases>
 			<MarketValue>550</MarketValue>
