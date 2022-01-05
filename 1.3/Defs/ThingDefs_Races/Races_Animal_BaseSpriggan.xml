@@ -97,7 +97,7 @@
 		  <foodType>VegetarianAnimal</foodType>
 		  <leatherDef>WoodLog</leatherDef>
 		  <wildness>0.80</wildness>
-		  <trainability>Intermediate</trainability>
+		  <trainability>Advanced</trainability>
 		  <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
 		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 		  <lifeExpectancy>50</lifeExpectancy>
