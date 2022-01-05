@@ -9,16 +9,17 @@
 
 		<match Class="PatchOperationSequence">
 			<operations>
-				<!--
 				<li Class="PatchOperationAddModExtension">
-					<xpath>/Defs/ThingDef[defName="ESCP_SprigganThingBase"]</xpath>
+					<xpath>/Defs/ThingDef[defName="ESCP_SprigganTree_Parasol"]</xpath>
 					<value>
 						<li Class="MorrowRim.ExtendedRaceProperties">
 							<ashResistant>Resistant</ashResistant>
 						</li>
+						<li Class="MorrowRim.PlantProperties">
+							<ashLover>true</ashLover>
+						</li>
 					</value>
 				</li>	
-				-->
 			</operations>
 		</match>
 	</Operation>

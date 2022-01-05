@@ -72,14 +72,14 @@
 		<label>bog spriggan tree seed</label>
 		<description>The seed of a bog spriggan tree. It can be planted to create a new bog spriggan tree, from which friendly bog spriggans will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Bog</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/BogSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Bog</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>
@@ -89,17 +89,17 @@
 	
 	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
 		<defName>ESCP_SprigganTreeSeed_Matron</defName>
-		<label>spriggan matron tree seed</label>
+		<label>matron spriggan tree seed</label>
 		<description>The seed of a spriggan matron tree. It can be planted to create a new spriggan matron tree, from which friendly spriggan matrons will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Matron</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/MatronSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Matron</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>
@@ -112,14 +112,14 @@
 		<label>earth mother spriggan tree seed</label>
 		<description>The seed of a earth mother spriggan tree. It can be planted to create a new earth mother spriggan tree, from which friendly earth mother spriggans will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Mother</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/MotherSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Mother</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>
@@ -132,14 +132,14 @@
 		<label>parasol spriggan tree seed</label>
 		<description>The seed of a parasol spriggan tree. It can be planted to create a new parasol spriggan tree, from which friendly parasol spriggans will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Parasol</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/ParasolSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Parasol</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>
@@ -152,14 +152,14 @@
 		<label>thorny spriggan tree seed</label>
 		<description>The seed of a thorny spriggan tree. It can be planted to create a new thorny spriggan tree, from which friendly thorny spriggans will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Thorni</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/ThorniSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Thorni</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>
@@ -172,14 +172,14 @@
 		<label>tundra spriggan tree seed</label>
 		<description>The seed of a tundra spriggan tree. It can be planted to create a new tundra spriggan tree, from which friendly tundra spriggans will periodically emerge.</description>
 		<descriptionHyperlinks>
-		  <ThingDef>Plant_TreeGauranlen</ThingDef>
+		  <ThingDef>ESCP_SprigganTree_Tundra</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/TundraSeeds</texPath>
 		</graphicData>
 		<comps>
 		  <li Class="CompProperties_Plantable">
-			<plantDefToSpawn>Plant_TreeGauranlen</plantDefToSpawn>
+			<plantDefToSpawn>ESCP_SprigganTree_Tundra</plantDefToSpawn>
 		  </li>
 		</comps>
 		<costList>

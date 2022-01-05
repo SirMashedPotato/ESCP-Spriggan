@@ -68,7 +68,7 @@
 		  <texPath>Things/Item/Resource/ESCP_Taproot/AnimaTaproot</texPath>
 		</graphicData>
 		<statBases>
-		  <MarketValue>80</MarketValue>
+		  <MarketValue>120</MarketValue>
 		</statBases>
 	</ThingDef>
 	

@@ -36,7 +36,7 @@
 	<!-- Notifications -->
 	<ESCP_Spriggan_SpriganAnimalControlled>A {0} has answered an enraged spriggans call for aid.</ESCP_Spriggan_SpriganAnimalControlled>
 	<ESCP_Spriggan_SpriganCreated>A new {0} has emerged from a {1}.</ESCP_Spriggan_SpriganCreated>
-	<ESCP_Spriggan_SpriganCreationProgress>{0}% progress until {1} emerges</ESCP_Spriggan_SpriganCreationProgress>
+	<ESCP_Spriggan_SpriganCreationProgress>{0} progress until {1} emerges</ESCP_Spriggan_SpriganCreationProgress>
 	<ESCP_Spriggan_SpriganCreation_Immature>{0} will begin forming once the {1} is mature</ESCP_Spriggan_SpriganCreation_Immature>
 
 </LanguageData>
