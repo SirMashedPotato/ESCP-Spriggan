@@ -28,6 +28,7 @@
 	  <li>Ludeon.RimWorld.Royalty</li>
 	  <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	  <li>vanillaexpanded.achievements</li>
+	  <li>SirMashedPotato.ESCP.RaceTools</li>
     </loadAfter>
 	<loadBefore>
 	</loadBefore>
