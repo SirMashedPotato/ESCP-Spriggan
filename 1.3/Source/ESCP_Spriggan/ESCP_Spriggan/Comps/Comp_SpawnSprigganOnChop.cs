@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 using System;
+using System.Collections.Generic;
 
 namespace ESCP_Spriggan
 {
@@ -14,50 +15,66 @@ namespace ESCP_Spriggan
 			}
 		}
 
+        public bool takingAgeDamage = false;
+
+        public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
+        {
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            base.PostPostApplyDamage(dinfo, totalDamageDealt);
+        }
+
+        public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
+        {
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            base.PostPreApplyDamage(dinfo, out absorbed);
+        }
+
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            //check smol attack
-            if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
+            if (!takingAgeDamage)
             {
-                if(Props.overrideList != null)
+                //check smol attack
+                if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
                 {
-                    foreach(Overrides ov in Props.overrideList)
+                    if (Props.overrideList != null)
                     {
-                        if(parent.def.ToString() == ov.treeDefName)
+                        foreach (Overrides ov in Props.overrideList)
                         {
-                            if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                            if (parent.def.ToString() == ov.treeDefName)
                             {
-                                SpawnAngrySpriggan(previousMap, parent, PawnKindDef.Named(ov.kindDefName));
-                                base.PostDestroy(mode, previousMap);
-                                return;
+                                if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                                {
+                                    SpawnAngrySpriggan(previousMap, parent, PawnKindDef.Named(ov.kindDefName));
+                                    base.PostDestroy(mode, previousMap);
+                                    return;
+                                }
+                                break;
                             }
-                            break;
+                        }
+                    }
+
+                    if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                    {
+                        SpawnAngrySpriggan(previousMap, parent);
+                        base.PostDestroy(mode, previousMap);
+                        return;
+                    }
+                }
+
+                //check the big boy attack last
+                if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
+                {
+                    WorldComponent_SprigganAttackTracker.IncreaseChance();
+                    if (Rand.Chance(WorldComponent_SprigganAttackTracker.GetChance()))
+                    {
+                        TriggerAttack(previousMap);
+                        if (ModSettings_Utility.ESCP_Spriggan_ResetAttackChance())
+                        {
+                            WorldComponent_SprigganAttackTracker.ResetChance();
                         }
                     }
                 }
-
-                if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
-                {
-                    SpawnAngrySpriggan(previousMap, parent);
-                    base.PostDestroy(mode, previousMap);
-                    return;
-                }
             }
-
-            //check the big boy attack last
-            if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
-            {
-                WorldComponent_SprigganAttackTracker.IncreaseChance();
-                if (Rand.Chance(WorldComponent_SprigganAttackTracker.GetChance()))
-                {
-                    TriggerAttack(previousMap);
-                    if (ModSettings_Utility.ESCP_Spriggan_ResetAttackChance())
-                    {
-                        WorldComponent_SprigganAttackTracker.ResetChance();
-                    }
-                }
-            }
-
 
             base.PostDestroy(mode, previousMap);
         }
@@ -81,10 +98,23 @@ namespace ESCP_Spriggan
 
         public static void SpawnAngrySpriggan(Map map, Thing parent, PawnKindDef kindDef)
         {
-            Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
-            GenSpawn.Spawn(newP, parent.Position, map);
-            newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
-            Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, newP);
+            if(kindDef != null)
+            {
+                int avg = (int)kindDef.wildGroupSize.Average;   //basically just gets the wild group size, spawns that number in. This does mean you pretty much always want wild group size to be 1
+                List<Pawn> pawns = new List<Pawn> { }; 
+                for (int i = 0; i < avg; i++)
+                {
+                    Pawn newP = PawnGenerator.GeneratePawn(kindDef, null);
+                    GenSpawn.Spawn(newP, parent.Position, map);
+                    newP.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+                    pawns.Add(newP);
+                }
+                if (!pawns.NullOrEmpty())
+                {
+                    Find.LetterStack.ReceiveLetter("ESCP_Spriggan_SprigganChopAttack_Label".Translate(), "ESCP_Spriggan_SprigganChopAttack_Description".Translate(), LetterDefOf.ThreatBig, pawns);
+
+                }
+            }
         }
     }
 }

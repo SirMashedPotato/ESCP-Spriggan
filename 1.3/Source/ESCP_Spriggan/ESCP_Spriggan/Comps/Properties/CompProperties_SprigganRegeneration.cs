@@ -8,7 +8,7 @@ namespace ESCP_Spriggan
 		{
 			this.compClass = typeof(Comp_SprigganRegeneration);
 		}
-		public float minHealth = 0.2f;
+		public float minPain = 0.8f;
 		public float Severity = 1f;
 		public HediffDef hediff;
 	}

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan</defName>
+		<label>spriggan</label>
+		<description>TODO</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTaproot</ThingDef>
+			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>5</milkIntervalDays>
+				<milkAmount>10</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
+				<maxRange>10</maxRange>
+				<maxNumberControlled>1</maxNumberControlled>
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+				<soundDef>PsychicInsanityLanceCast</soundDef>
+			</li>
+		</comps>
+		<race>
+			<wildBiomes>
+				<TemperateForest>0.07</TemperateForest>
+				<TemperateSwamp>0.04</TemperateSwamp>
+				<BorealForest>0.07</BorealForest>
+				<TropicalRainforest>0.07</TropicalRainforest>
+				<TropicalSwamp>0.04</TropicalSwamp>
+				<Tundra>0.05</Tundra>
+				<ColdBog>0.04</ColdBog>
+				<!-- Biomes! -->
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_Atoll>
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateIsland>
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateArchipelago>
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalIsland>
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalArchipelago>
+				<!-- Regrowth -->
+				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.07</RG-AF_AspenForest>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_AlpineMeadow>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CloudForest>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CoastalDunes>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<defName>ESCP_Spriggan</defName>
+		<label>spriggan</label>
+		<race>ESCP_Spriggan</race>
+		<lifeStages>
+		  <li>
+			<label>spriggan sproutling</label>
+			<labelPlural>spriggan sproutlings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>spriggan sapling</label>
+			<labelPlural>spriggan saplings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.3, 0.3)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			</dessicatedBodyGraphicData>
+			<butcherBodyPart>
+				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+				<thing>ESCP_SprigganTaproot</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

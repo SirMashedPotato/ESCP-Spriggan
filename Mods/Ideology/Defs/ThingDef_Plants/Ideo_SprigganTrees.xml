@@ -1,4 +1,226 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- Base -->
+	
+	<ThingDef ParentName="TreeBase" Name="ESCP_SprigganTreeBase" Abstract="True">
+		<graphicData>
+		  <!--<texPath>Things/Plant/GauranlenTree</texPath>-->
+		  <graphicClass>Graphic_Random</graphicClass>
+		  <shadowData>
+			<volume>(0.2, 0.35, 0.13)</volume>
+		  </shadowData>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+		<minifiedDef IsNull="True" />
+		<statBases>
+		  <Beauty>6</Beauty>
+		  <BeautyOutdoors>6</BeautyOutdoors>
+		  <Flammability>1</Flammability>
+		  <MaxHitPoints>300</MaxHitPoints>
+		</statBases>
+		<ingestible />
+		<plant>
+		  <visualSizeRange>1.5~3.5</visualSizeRange>
+		  <sowMinSkill>0</sowMinSkill>
+		  <sowTags Inherit="False"/>
+		  <lifespanDaysPerGrowDays>15</lifespanDaysPerGrowDays>
+		  <!--<fertilityMin>0.05</fertilityMin>-->
+		  <fertilitySensitivity>1</fertilitySensitivity>
+		  <wildClusterWeight>0</wildClusterWeight>
+		  <sowWork>400</sowWork>
+		  <harvestYield>35</harvestYield>
+		  <treeCategory>Super</treeCategory>
+		  <dieIfNoSunlight>true</dieIfNoSunlight>	<!-- Set parasol to false -->
+		  <!--<growMinGlow>0.49</growMinGlow>-->
+		  <sowResearchPrerequisites Inherit="False" />
+		  <dieFromToxicFallout>False</dieFromToxicFallout>	<!-- Maybe set to true? -->
+		  <showGrowthInInspectPane>true</showGrowthInInspectPane>
+		  <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+		  <warnIfMarkedForCut>true</warnIfMarkedForCut>
+		</plant>
+		<comps>
+		  <li Class="CompProperties_SelfhealHitpoints">
+			<ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Specifics -->
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree</defName>
+		<label>spriggan tree</label>
+		<description>A strange tree, grown from a sap infused taproot. Friendly spriggans will emerge from the tree every 30 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed</ThingDef>
+			<ThingDef>ESCP_Spriggan</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Spriggan</texPath>
+		</graphicData>
+		<plant>
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
+			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Spriggan_Leafless</leaflessGraphicPath>
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Spriggan_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan</pawnDef>
+				<timeRequired>1800000</timeRequired>	<!--30 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Bog</defName>
+		<label>bog spriggan tree</label>
+		<description>A strange tree, grown from a sap infused bog taproot. Friendly bog spriggans will emerge from the tree every 30 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Bog</ThingDef>
+			<ThingDef>ESCP_Spriggan_Bog</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Bog</texPath>
+		</graphicData>
+		<plant>
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
+			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Bog_Leafless</leaflessGraphicPath>-->
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Bog_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_Bog</pawnDef>
+				<timeRequired>1800000</timeRequired>	<!--30 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Matron</defName>
+		<label>matron spriggan tree</label>
+		<description>A strange tree, grown from a sap infused matron taproot. Friendly spriggan matrons will emerge from the tree every 45 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Matron</ThingDef>
+			<ThingDef>ESCP_Spriggan_Matron</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Matron</texPath>
+		</graphicData>
+		<plant>
+			<growDays>45</growDays>	<!-- lose one full 'harvests' -->
+			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Matron_Leafless</leaflessGraphicPath>
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Matron_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_Matron</pawnDef>
+				<timeRequired>2700000</timeRequired>	<!--45 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Mother</defName>
+		<label>earth mother spriggan tree</label>
+		<description>A strange tree, grown from a sap infused earth mother taproot. Friendly spriggan earth mothers will emerge from the tree every 60 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Mother</ThingDef>
+			<ThingDef>ESCP_Spriggan_EarthMother</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Mother</texPath>
+		</graphicData>
+		<plant>
+			<growDays>60</growDays>	<!-- lose one full 'harvests' -->
+			<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Mother_Leafless</leaflessGraphicPath>
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Mother_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_EarthMother</pawnDef>
+				<timeRequired>3600000</timeRequired>	<!--60 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Parasol</defName>
+		<label>parasol spriggan tree</label>
+		<description>A strange tree, grown from a sap infused parasol taproot. Friendly parasol spriggans will emerge from the tree every 30 days, once the tree is mature.\n\nUnlike most other spriggan trees, the parasol spriggan tree can grow in low light conditions, and will recieve a 10% boost to growth, rate while outside during, an ash storm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Parasol</ThingDef>
+			<ThingDef>ESCP_Spriggan_Parasol</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Parasol</texPath>
+		</graphicData>
+		<plant>
+			<dieIfNoSunlight>false</dieIfNoSunlight>
+			<dieIfLeafless>false</dieIfLeafless>
+			<growMinGlow>0</growMinGlow>
+			<growDays>30</growDays>	<!-- lose one full 'harvests' -->
+			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Parasol_Leafless</leaflessGraphicPath>-->
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Parasol_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_Parasol</pawnDef>
+				<timeRequired>1800000</timeRequired>	<!--30 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Thorni</defName>
+		<label>thorny spriggan tree</label>
+		<description>A strange tree, grown from a sap infused thorny taproot. Friendly thorny spriggans will emerge from the tree every 15 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Thorni</ThingDef>
+			<ThingDef>ESCP_Spriggan_Thorni</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Thorni</texPath>
+		</graphicData>
+		<plant>
+			<visualSizeRange>0.5~2.5</visualSizeRange>
+			<growDays>15</growDays>	<!-- lose one full 'harvests' -->
+			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Thorni_Leafless</leaflessGraphicPath>-->
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Thorni_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_Thorni</pawnDef>
+				<timeRequired>900000</timeRequired>	<!--15 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeBase">
+		<defName>ESCP_SprigganTree_Tundra</defName>
+		<label>tundra spriggan tree</label>
+		<description>A strange tree, grown from a sap infused tundra taproot. Friendly tundra spriggans will emerge from the tree every 60 days, once the tree is mature.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTreeSeed_Tundra</ThingDef>
+			<ThingDef>ESCP_Spriggan_Tundra</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Plant/ESCP_SprigganTree/Tundra</texPath>
+		</graphicData>
+		<plant>
+			<visualSizeRange>3~7</visualSizeRange>
+			<growDays>60</growDays>	<!-- lose one full 'harvests' -->
+			<!--<leaflessGraphicPath>Things/Plant/ESCP_SprigganTree/Tundra_Leafless</leaflessGraphicPath>-->
+			<immatureGraphicPath>Things/Plant/ESCP_SprigganTree/Tundra_Immature</immatureGraphicPath>
+		</plant>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+				<pawnDef>ESCP_Spriggan_Tundra</pawnDef>
+				<timeRequired>3600000</timeRequired>	<!--60 days * 60,000-->
+			</li>
+		</comps>
+	</ThingDef>
+
 </Defs>

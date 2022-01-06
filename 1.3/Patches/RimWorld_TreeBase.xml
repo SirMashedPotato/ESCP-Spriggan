@@ -17,6 +17,12 @@
 								<overrideChance>true</overrideChance>
 								<overriddenChance>1</overriddenChance>
 							</li>
+							<li MayRequire="VanillaExpanded.VIEAT">
+								<treeDefName>Plant_TreeGauranlen</treeDefName>
+								<kindDefName>ESCP_Spriggan_Anima</kindDefName>
+								<overrideChance>true</overrideChance>
+								<overriddenChance>1</overriddenChance>
+							</li>
 						</overrideList>
 					</li>
 				</comps>

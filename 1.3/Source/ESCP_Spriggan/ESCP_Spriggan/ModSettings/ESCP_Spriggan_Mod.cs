@@ -28,8 +28,8 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_EnableChopChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_EnableChopChance, 0.01f, 1f) * 100) / 100;
             listing_Standard.Gap();
 
-            listing_Standard.GapLine();
-            listing_Standard.Gap();
+            //listing_Standard.GapLine();
+            //listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAttackChance".Translate(), ref settings.ESCP_Spriggan_EnableAttackChance);
             listing_Standard.Gap();
@@ -50,6 +50,18 @@ namespace ESCP_Spriggan
 
             listing_Standard.Label("ESCP_Spriggan_DecreasedAttackChance".Translate() + " (" + settings.ESCP_Spriggan_DecreasedAttackChance * 100 + "%)");
             settings.ESCP_Spriggan_DecreasedAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_DecreasedAttackChance, 0f, 1f) * 100) / 100;
+            listing_Standard.Gap();
+
+            //listing_Standard.GapLine();
+            //listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAnimalControl".Translate(), ref settings.ESCP_Spriggan_EnableAnimalControl);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableRegen".Translate(), ref settings.ESCP_Spriggan_EnableRegen);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableDefaultType".Translate(), ref settings.ESCP_Spriggan_EnableDefaultType);
             listing_Standard.Gap();
 
             if (Prefs.DevMode)

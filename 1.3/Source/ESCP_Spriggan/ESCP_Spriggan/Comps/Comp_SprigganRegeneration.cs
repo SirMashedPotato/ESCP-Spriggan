@@ -1,4 +1,5 @@
 ﻿using Verse;
+using RimWorld;
 
 namespace ESCP_Spriggan
 {
@@ -18,7 +19,7 @@ namespace ESCP_Spriggan
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
 
             Pawn pawn = parent as Pawn;
-            if (!pawn.Dead && pawn.Spawned && pawn.health.summaryHealth.SummaryHealthPercent <= Props.minHealth && !pawn.health.hediffSet.HasHediff(Props.hediff))
+            if (!pawn.Dead && ModSettings_Utility.ESCP_Spriggan_EnableRegen() && pawn.Spawned && pawn.health.hediffSet.PainTotal >= Props.minPain && !pawn.health.hediffSet.HasHediff(Props.hediff))
             {
                 pawn.health.AddHediff(Props.hediff).Severity = Props.Severity;
             }

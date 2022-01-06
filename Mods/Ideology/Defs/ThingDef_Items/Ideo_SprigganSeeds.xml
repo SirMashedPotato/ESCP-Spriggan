@@ -1,4 +1,190 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- base -->
+	
+	<ThingDef ParentName="ResourceBase" Name="ESCP_SprigganTreeSeedBase" Abstract="True">
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToMake>800</WorkToMake>
+		  <Mass>0.3</Mass>
+		  <Beauty>0</Beauty>
+		  <Flammability>0.8</Flammability>
+		</statBases>
+		<stackLimit>75</stackLimit>
+		<graphicData>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		</graphicData>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+		<comps>
+		</comps>
+		<!-- Crafting -->
+		<recipeMaker>
+		  <workSpeedStat>PlantWorkSpeed</workSpeedStat>
+		  <workSkill>Plants</workSkill>
+		  <effectWorking>Cook</effectWorking>
+		  <soundWorking>Recipe_CookMeal</soundWorking>
+		  <recipeUsers>
+			<li>CraftingSpot</li>
+		  </recipeUsers>
+		  <skillRequirements>
+			<Plants>12</Plants>
+		  </skillRequirements>
+		  <researchPrerequisite>TreeSowing</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+		  <ESCP_SprigganSap>25</ESCP_SprigganSap>
+		</costList>
+	</ThingDef>
+	
+	<!-- Specific seeds -->
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed</defName>
+		<label>spriggan tree seed</label>
+		<description>The seed of a spriggan tree. It can be planted to create a new spriggan tree, from which friendly spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/SprigganSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot>1</ESCP_SprigganTaproot>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Bog</defName>
+		<label>bog spriggan tree seed</label>
+		<description>The seed of a bog spriggan tree. It can be planted to create a new bog spriggan tree, from which friendly bog spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Bog</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/BogSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Bog</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Bog>1</ESCP_SprigganTaproot_Bog>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Matron</defName>
+		<label>matron spriggan tree seed</label>
+		<description>The seed of a spriggan matron tree. It can be planted to create a new spriggan matron tree, from which friendly spriggan matrons will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Matron</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/MatronSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Matron</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Matron>1</ESCP_SprigganTaproot_Matron>
+		</costList>
+	</ThingDef>
+
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Mother</defName>
+		<label>earth mother spriggan tree seed</label>
+		<description>The seed of a earth mother spriggan tree. It can be planted to create a new earth mother spriggan tree, from which friendly earth mother spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Mother</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/MotherSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Mother</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Mother>1</ESCP_SprigganTaproot_Mother>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Parasol</defName>
+		<label>parasol spriggan tree seed</label>
+		<description>The seed of a parasol spriggan tree. It can be planted to create a new parasol spriggan tree, from which friendly parasol spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Parasol</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/ParasolSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Parasol</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Parasol>1</ESCP_SprigganTaproot_Parasol>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Thorni</defName>
+		<label>thorny spriggan tree seed</label>
+		<description>The seed of a thorny spriggan tree. It can be planted to create a new thorny spriggan tree, from which friendly thorny spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Thorni</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/ThorniSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Thorni</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Thorni>1</ESCP_SprigganTaproot_Thorni>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="ESCP_SprigganTreeSeedBase">
+		<defName>ESCP_SprigganTreeSeed_Tundra</defName>
+		<label>tundra spriggan tree seed</label>
+		<description>The seed of a tundra spriggan tree. It can be planted to create a new tundra spriggan tree, from which friendly tundra spriggans will periodically emerge.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>ESCP_SprigganTree_Tundra</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Item/Resource/ESCP_SprigganSeed/TundraSeeds</texPath>
+		</graphicData>
+		<comps>
+		  <li Class="CompProperties_Plantable">
+			<plantDefToSpawn>ESCP_SprigganTree_Tundra</plantDefToSpawn>
+		  </li>
+		</comps>
+		<costList>
+		  <ESCP_SprigganTaproot_Tundra>1</ESCP_SprigganTaproot_Tundra>
+		</costList>
+	</ThingDef>
+
 </Defs>
