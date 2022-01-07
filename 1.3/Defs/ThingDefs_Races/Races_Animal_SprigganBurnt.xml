@@ -190,7 +190,7 @@
 			<damageDef>Flame</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<stoppingPower>0.3</stoppingPower>
-			<speed>60</speed>
+			<speed>50</speed>
 		</projectile>
 	</ThingDef>
 
