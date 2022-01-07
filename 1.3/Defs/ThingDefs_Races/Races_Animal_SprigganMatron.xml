@@ -96,6 +96,7 @@
 		</comps>
 		<race>
 			<baseBodySize>1.25</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
 			<wildness>0.85</wildness>
 			<wildBiomes>
 				<TemperateForest>0.015</TemperateForest>
