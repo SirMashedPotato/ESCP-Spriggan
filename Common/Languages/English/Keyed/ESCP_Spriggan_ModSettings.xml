@@ -14,8 +14,8 @@
 	<ESCP_Spriggan_ResetAttackChance>Reset the chance of a spriggan attack whenever a spriggan attack is triggered.</ESCP_Spriggan_ResetAttackChance>
 	
 	<ESCP_Spriggan_InitialAttackChance>The initial chance that a spriggan attack occurs when a tree is cut down.</ESCP_Spriggan_InitialAttackChance>
-	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
-	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance decreases per in game day.</ESCP_Spriggan_DecreasedAttackChance>
+	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance of attacks increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
+	<ESCP_Spriggan_DecreasedAttackChance>The amount the chance of attacks decreases per in game day.</ESCP_Spriggan_DecreasedAttackChance>
 	
 	<ESCP_Spriggan_EnableDefaultType>Enable spriggan attacks defaulting to standard spriggans for biomes without assigned spriggans.</ESCP_Spriggan_EnableDefaultType>
 	<ESCP_Spriggan_EnableAnimalControl>Enable wild spriggans controlling wild animals when enraged.</ESCP_Spriggan_EnableAnimalControl>

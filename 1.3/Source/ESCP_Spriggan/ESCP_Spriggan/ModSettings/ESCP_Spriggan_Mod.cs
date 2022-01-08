@@ -25,7 +25,7 @@ namespace ESCP_Spriggan
             listing_Standard.Gap();
 
             listing_Standard.Label("ESCP_Spriggan_EnableChopChance".Translate() + " (" + settings.ESCP_Spriggan_EnableChopChance * 100 + "%)");
-            settings.ESCP_Spriggan_EnableChopChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_EnableChopChance, 0.01f, 1f) * 100) / 100;
+            settings.ESCP_Spriggan_EnableChopChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_EnableChopChance, 0.005f, 1f) * 200) / 200;
             listing_Standard.Gap();
 
             //listing_Standard.GapLine();
@@ -41,11 +41,11 @@ namespace ESCP_Spriggan
             listing_Standard.Gap();
 
             listing_Standard.Label("ESCP_Spriggan_InitialAttackChance".Translate() + " (" + settings.ESCP_Spriggan_InitialAttackChance * 100 + "%)");
-            settings.ESCP_Spriggan_InitialAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_InitialAttackChance, 0.01f, 1f) * 100) / 100;
+            settings.ESCP_Spriggan_InitialAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_InitialAttackChance, 0.005f, 1f) * 200) / 200;
             listing_Standard.Gap();
 
             listing_Standard.Label("ESCP_Spriggan_IncreasedAttackChance".Translate() + " (" + settings.ESCP_Spriggan_IncreasedAttackChance * 100 + "%)");
-            settings.ESCP_Spriggan_IncreasedAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_IncreasedAttackChance, 0f, 1f) * 100) / 100;
+            settings.ESCP_Spriggan_IncreasedAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_IncreasedAttackChance, 0f, 1f) * 200) / 200;
             listing_Standard.Gap();
 
             listing_Standard.Label("ESCP_Spriggan_DecreasedAttackChance".Translate() + " (" + settings.ESCP_Spriggan_DecreasedAttackChance * 100 + "%)");
