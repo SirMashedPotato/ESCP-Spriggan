@@ -4,7 +4,7 @@
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_Matron</defName>
 		<label>spriggan matron</label>
-		<description>TODO</description>
+		<description>Spriggans are creatures of wood and psychic energy, concentrated into a being that is immensely concerned with the well being of plant life. Often attacking anything threatening or damaging forested areas, as well as hiding or laying in ambush in such areas, spriggans come in all shapes and sizes living in most biomes that have some vegetation.\n\nAlthough a spriggan may only have its wood skin for protection, they are still quite a threat to people if angered. Long sharp claws as well as the ability to call upon animals to protect the forest makes them a great threat to trespassers, or a boon to those willing to risk everything to befriend one of them. Spriggans also have an innate healing ability when close to death.\n\nMatrons are spriggans that have seen many years, and are far less understanding of those who trespass on forest sanctuaries. Can be found in any area that supports plant life, are taller and stronger then their younger kin and more animals will flock to them in the forests defence.</description>
 		<descriptionHyperlinks>
 			<ThingDef>ESCP_SprigganTaproot_Matron</ThingDef>
 			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree_Matron</ThingDef>

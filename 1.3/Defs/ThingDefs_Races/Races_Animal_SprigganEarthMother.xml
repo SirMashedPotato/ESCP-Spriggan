@@ -4,7 +4,7 @@
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_EarthMother</defName>
 		<label>spriggan earth mother</label>
-		<description>TODO</description>
+		<description>Spriggans are creatures of wood and psychic energy, concentrated into a being that is immensely concerned with the well being of plant life. Often attacking anything threatening or damaging forested areas, as well as hiding or laying in ambush in such areas, spriggans come in all shapes and sizes living in most biomes that have some vegetation.\n\nAlthough a spriggan may only have its wood skin for protection, they are still quite a threat to people if angered. Long sharp claws as well as the ability to call upon animals to protect the forest makes them a great threat to trespassers, or a boon to those willing to risk everything to befriend one of them. Spriggans also have an innate healing ability when close to death.\n\nEarth Mother Spriggans should be feared above all other spriggans, they have no mercy for any creature who would harm the forest and hold all in great contempt. Having seen a great many years and transformed into a earth mother she will be the forests greatest guardian and can be found in any biome with plant life, although she is quite rare.</description>
 		<descriptionHyperlinks>
 			<ThingDef>ESCP_SprigganTaproot_Mother</ThingDef>
 			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree_Mother</ThingDef>
