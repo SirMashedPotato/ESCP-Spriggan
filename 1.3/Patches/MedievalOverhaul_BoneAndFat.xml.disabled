@@ -12,7 +12,7 @@
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/ThingDef[@Name = "ESCP_SprigganThingBase"]/statBases</xpath>
 					<value>
-						<li Class="DankPyon_MedievalOverhaul.ButcherProperties">
+						<li Class="DankPyon.ButcherProperties">
 							<hasBone>false</hasBone>
 							<hasFat>false</hasFat>
 						</li>
