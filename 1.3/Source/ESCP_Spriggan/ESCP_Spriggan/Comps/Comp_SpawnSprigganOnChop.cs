@@ -33,6 +33,10 @@ namespace ESCP_Spriggan
         {
             if (!takingAgeDamage)
             {
+                if (ModSettings_Utility.ESCP_Spriggan_ToxicAttackChance() && previousMap.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
+                {
+                    return;
+                }
                 //check smol attack
                 if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
                 {

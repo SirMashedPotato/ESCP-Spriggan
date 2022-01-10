@@ -32,6 +32,9 @@ namespace ESCP_Spriggan
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_FireAttackChance".Translate(), ref settings.ESCP_Spriggan_FireAttackChance);
             listing_Standard.Gap();
 
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_ToxicAttackChance".Translate(), ref settings.ESCP_Spriggan_ToxicAttackChance);
+            listing_Standard.Gap();
+
             listing_Standard.GapLine();
             listing_Standard.Gap();
 
