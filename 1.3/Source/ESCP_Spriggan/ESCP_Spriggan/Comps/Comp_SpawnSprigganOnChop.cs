@@ -61,7 +61,6 @@ namespace ESCP_Spriggan
                             }
                         }
                     }
-
                     if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
                     {
                         SpawnAngrySpriggan(previousMap, parent);
