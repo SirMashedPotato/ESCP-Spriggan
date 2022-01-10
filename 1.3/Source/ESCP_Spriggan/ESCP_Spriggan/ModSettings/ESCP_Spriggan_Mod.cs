@@ -15,12 +15,26 @@ namespace ESCP_Spriggan
 
         public override string SettingsCategory() => "ESCP_Spriggan_ModName".Translate();
 
+        private static Vector2 scrollPosition = Vector2.zero;
+
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Listing_Standard listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(inRect);
+            Rect rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
+            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 2));
+            Widgets.BeginScrollView(rect, ref scrollPosition, rect2);
+            listing_Standard.Begin(rect2);
 
             /* settings */
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_SownAttackChance".Translate(), ref settings.ESCP_Spriggan_SownAttackChance);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_FireAttackChance".Translate(), ref settings.ESCP_Spriggan_FireAttackChance);
+            listing_Standard.Gap();
+
+            listing_Standard.GapLine();
+            listing_Standard.Gap();
+
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableChopAttack".Translate(), ref settings.ESCP_Spriggan_EnableChopAttack);
             listing_Standard.Gap();
 
@@ -28,13 +42,10 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_EnableChopChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_EnableChopChance, 0.001f, 1f) * 1000) / 1000;
             listing_Standard.Gap();
 
-            //listing_Standard.GapLine();
-            //listing_Standard.Gap();
-
-            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAttackChance".Translate(), ref settings.ESCP_Spriggan_EnableAttackChance);
+            listing_Standard.GapLine();
             listing_Standard.Gap();
 
-            listing_Standard.CheckboxLabeled("ESCP_Spriggan_SownAttackChance".Translate(), ref settings.ESCP_Spriggan_SownAttackChance);
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAttackChance".Translate(), ref settings.ESCP_Spriggan_EnableAttackChance);
             listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_ResetAttackChance".Translate(), ref settings.ESCP_Spriggan_ResetAttackChance);
@@ -52,8 +63,8 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_DecreasedAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_DecreasedAttackChance, 0f, 1f) * 100) / 100;
             listing_Standard.Gap();
 
-            //listing_Standard.GapLine();
-            //listing_Standard.Gap();
+            listing_Standard.GapLine();
+            listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_EnableAnimalControl".Translate(), ref settings.ESCP_Spriggan_EnableAnimalControl);
             listing_Standard.Gap();
@@ -81,6 +92,7 @@ namespace ESCP_Spriggan
             }
 
             listing_Standard.End();
+            Widgets.EndScrollView();
             base.DoSettingsWindowContents(inRect);
         }
     }

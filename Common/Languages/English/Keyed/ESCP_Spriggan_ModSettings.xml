@@ -11,6 +11,7 @@
 	
 	<ESCP_Spriggan_EnableAttackChance>Enable spriggan attacks occurring when trees are cut.</ESCP_Spriggan_EnableAttackChance>
 	<ESCP_Spriggan_SownAttackChance>Cutting sown trees can trigger spriggan attacks.</ESCP_Spriggan_SownAttackChance>
+	<ESCP_Spriggan_FireAttackChance>Trees being destroyed by fires can trigger spriggan attacks.</ESCP_Spriggan_FireAttackChance>
 	<ESCP_Spriggan_ResetAttackChance>Reset the chance of a spriggan attack whenever a spriggan attack is triggered.</ESCP_Spriggan_ResetAttackChance>
 	
 	<ESCP_Spriggan_InitialAttackChance>The initial chance that a spriggan attack occurs when a tree is cut down.</ESCP_Spriggan_InitialAttackChance>

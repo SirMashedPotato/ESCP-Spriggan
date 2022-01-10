@@ -10,6 +10,7 @@ namespace ESCP_Spriggan
 
         public bool ESCP_Spriggan_EnableAttackChance = ESCP_Spriggan_EnableAttackChance_def;
         public bool ESCP_Spriggan_SownAttackChance = ESCP_Spriggan_SownAttackChance_def;
+        public bool ESCP_Spriggan_FireAttackChance = ESCP_Spriggan_FireAttackChance_def;
         public bool ESCP_Spriggan_ResetAttackChance = ESCP_Spriggan_ResetAttackChance_def;
         public float ESCP_Spriggan_InitialAttackChance = ESCP_Spriggan_InitialAttackChance_def;
         public float ESCP_Spriggan_IncreasedAttackChance = ESCP_Spriggan_IncreasedAttackChance_def;
@@ -27,6 +28,7 @@ namespace ESCP_Spriggan
 
         private static readonly bool ESCP_Spriggan_EnableAttackChance_def = true;
         private static readonly bool ESCP_Spriggan_SownAttackChance_def = true;
+        private static readonly bool ESCP_Spriggan_FireAttackChance_def = false;
         private static readonly bool ESCP_Spriggan_ResetAttackChance_def = true;
         private static readonly float ESCP_Spriggan_InitialAttackChance_def = 0.005f;
         private static readonly float ESCP_Spriggan_IncreasedAttackChance_def = 0.005f;
@@ -46,6 +48,7 @@ namespace ESCP_Spriggan
 
             Scribe_Values.Look(ref ESCP_Spriggan_EnableAttackChance, "ESCP_Spriggan_EnableAttackChance", ESCP_Spriggan_EnableAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_SownAttackChance, "ESCP_Spriggan_SownAttackChance", ESCP_Spriggan_SownAttackChance_def);
+            Scribe_Values.Look(ref ESCP_Spriggan_FireAttackChance, "ESCP_Spriggan_FireAttackChance", ESCP_Spriggan_FireAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_ResetAttackChance, "ESCP_Spriggan_ResetAttackChance", ESCP_Spriggan_ResetAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_InitialAttackChance, "ESCP_Spriggan_InitialAttackChance", ESCP_Spriggan_InitialAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_IncreasedAttackChance, "ESCP_Spriggan_IncreasedAttackChance", ESCP_Spriggan_IncreasedAttackChance_def);
@@ -65,6 +68,7 @@ namespace ESCP_Spriggan
 
             settings.ESCP_Spriggan_EnableAttackChance = ESCP_Spriggan_EnableAttackChance_def;
             settings.ESCP_Spriggan_SownAttackChance = ESCP_Spriggan_SownAttackChance_def;
+            settings.ESCP_Spriggan_FireAttackChance = ESCP_Spriggan_FireAttackChance_def;
             settings.ESCP_Spriggan_ResetAttackChance = ESCP_Spriggan_ResetAttackChance_def;
             settings.ESCP_Spriggan_InitialAttackChance = ESCP_Spriggan_InitialAttackChance_def;
             settings.ESCP_Spriggan_IncreasedAttackChance = ESCP_Spriggan_IncreasedAttackChance_def;

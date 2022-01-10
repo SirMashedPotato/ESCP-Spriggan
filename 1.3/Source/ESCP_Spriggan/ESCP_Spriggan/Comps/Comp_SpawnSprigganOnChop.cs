@@ -19,13 +19,13 @@ namespace ESCP_Spriggan
 
         public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ModSettings_Utility.ESCP_Spriggan_FireAttackChance());
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
         }
 
         public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
         {
-            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration;
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ModSettings_Utility.ESCP_Spriggan_FireAttackChance());
             base.PostPreApplyDamage(dinfo, out absorbed);
         }
 
@@ -36,6 +36,11 @@ namespace ESCP_Spriggan
                 //check smol attack
                 if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
                 {
+                    Plant p = parent as Plant;
+                    if(!ModSettings_Utility.ESCP_Spriggan_SownAttackChance() && p.sown)
+                    {
+                        return;
+                    }
                     if (Props.overrideList != null)
                     {
                         foreach (Overrides ov in Props.overrideList)
