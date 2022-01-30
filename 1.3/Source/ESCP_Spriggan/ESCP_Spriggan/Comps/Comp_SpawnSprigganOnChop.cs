@@ -70,7 +70,7 @@ namespace ESCP_Spriggan
                 }
 
                 //check the big boy attack last
-                if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
+                if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance() && (!ModSettings_Utility.ESCP_Spriggan_RaidsCooldown() || WorldComponent_SprigganAttackTracker.CooldownReady()))
                 {
                     WorldComponent_SprigganAttackTracker.IncreaseChance();
                     if (Rand.Chance(WorldComponent_SprigganAttackTracker.GetChance()))
@@ -80,6 +80,7 @@ namespace ESCP_Spriggan
                         {
                             WorldComponent_SprigganAttackTracker.ResetChance();
                         }
+                        WorldComponent_SprigganAttackTracker.ResetRaidCooldown();
                     }
                 }
             }

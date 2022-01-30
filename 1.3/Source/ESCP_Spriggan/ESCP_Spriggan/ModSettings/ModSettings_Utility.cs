@@ -43,6 +43,11 @@ namespace ESCP_Spriggan
             return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_ResetAttackChance;
         }
 
+        public static bool ESCP_Spriggan_RaidsCooldown()
+        {
+            return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_RaidsCooldown;
+        }
+
         public static float ESCP_Spriggan_InitialAttackChance()
         {
             return LoadedModManager.GetMod<ESCP_Spriggan_Mod>().GetSettings<ESCP_Spriggan_ModSettings>().ESCP_Spriggan_InitialAttackChance;

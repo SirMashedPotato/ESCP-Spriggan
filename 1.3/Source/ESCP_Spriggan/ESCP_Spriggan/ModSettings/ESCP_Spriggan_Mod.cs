@@ -54,6 +54,9 @@ namespace ESCP_Spriggan
             listing_Standard.CheckboxLabeled("ESCP_Spriggan_ResetAttackChance".Translate(), ref settings.ESCP_Spriggan_ResetAttackChance);
             listing_Standard.Gap();
 
+            listing_Standard.CheckboxLabeled("ESCP_Spriggan_RaidsCooldown".Translate(), ref settings.ESCP_Spriggan_RaidsCooldown);
+            listing_Standard.Gap();
+
             listing_Standard.Label("ESCP_Spriggan_InitialAttackChance".Translate() + " (" + settings.ESCP_Spriggan_InitialAttackChance * 100 + "%)");
             settings.ESCP_Spriggan_InitialAttackChance = (float)Mathf.Round(listing_Standard.Slider(settings.ESCP_Spriggan_InitialAttackChance, 0.001f, 1f) * 1000) / 1000;
             listing_Standard.Gap();

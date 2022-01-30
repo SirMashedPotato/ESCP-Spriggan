@@ -16,6 +16,7 @@ namespace ESCP_Spriggan
         public float ESCP_Spriggan_InitialAttackChance = ESCP_Spriggan_InitialAttackChance_def;
         public float ESCP_Spriggan_IncreasedAttackChance = ESCP_Spriggan_IncreasedAttackChance_def;
         public float ESCP_Spriggan_DecreasedAttackChance = ESCP_Spriggan_DecreasedAttackChance_def;
+        public bool ESCP_Spriggan_RaidsCooldown = ESCP_Spriggan_RaidsCooldown_def;
 
         public bool ESCP_Spriggan_EnableDefaultType = ESCP_Spriggan_EnableDefaultType_def;
         public bool ESCP_Spriggan_EnableAnimalControl = ESCP_Spriggan_EnableAnimalControl_def;
@@ -35,6 +36,7 @@ namespace ESCP_Spriggan
         private static readonly float ESCP_Spriggan_InitialAttackChance_def = 0.005f;
         private static readonly float ESCP_Spriggan_IncreasedAttackChance_def = 0.0f; //used to be 0.005f
         private static readonly float ESCP_Spriggan_DecreasedAttackChance_def = 0.1f;
+        private static readonly bool ESCP_Spriggan_RaidsCooldown_def = true;
 
         private static readonly bool ESCP_Spriggan_EnableDefaultType_def = true;
         private static readonly bool ESCP_Spriggan_EnableAnimalControl_def = true;
@@ -56,6 +58,7 @@ namespace ESCP_Spriggan
             Scribe_Values.Look(ref ESCP_Spriggan_InitialAttackChance, "ESCP_Spriggan_InitialAttackChance", ESCP_Spriggan_InitialAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_IncreasedAttackChance, "ESCP_Spriggan_IncreasedAttackChance", ESCP_Spriggan_IncreasedAttackChance_def);
             Scribe_Values.Look(ref ESCP_Spriggan_DecreasedAttackChance, "ESCP_Spriggan_DecreasedAttackChance", ESCP_Spriggan_DecreasedAttackChance_def);
+            Scribe_Values.Look(ref ESCP_Spriggan_RaidsCooldown, "ESCP_Spriggan_RaidsCooldown", ESCP_Spriggan_RaidsCooldown_def);
 
             Scribe_Values.Look(ref ESCP_Spriggan_EnableDefaultType, "ESCP_Spriggan_EnableDefaultType", ESCP_Spriggan_EnableDefaultType_def);
             Scribe_Values.Look(ref ESCP_Spriggan_EnableAnimalControl, "ESCP_Spriggan_EnableAnimalControl", ESCP_Spriggan_EnableAnimalControl_def);
@@ -81,6 +84,7 @@ namespace ESCP_Spriggan
             settings.ESCP_Spriggan_EnableDefaultType = ESCP_Spriggan_EnableDefaultType_def;
             settings.ESCP_Spriggan_EnableAnimalControl = ESCP_Spriggan_EnableAnimalControl_def;
             settings.ESCP_Spriggan_EnableRegen = ESCP_Spriggan_EnableRegen_def;
+            settings.ESCP_Spriggan_RaidsCooldown = ESCP_Spriggan_RaidsCooldown_def;
         }
     }
 }

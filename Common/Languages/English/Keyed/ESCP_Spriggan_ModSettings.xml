@@ -14,6 +14,7 @@
 	<ESCP_Spriggan_FireAttackChance>Trees being destroyed by fires can trigger spriggan attacks.</ESCP_Spriggan_FireAttackChance>
 	<ESCP_Spriggan_ToxicAttackChance>Prevent spriggan attacks during toxic fallout.</ESCP_Spriggan_ToxicAttackChance>
 	<ESCP_Spriggan_ResetAttackChance>Reset the chance of a spriggan attack whenever a spriggan attack is triggered.</ESCP_Spriggan_ResetAttackChance>
+	<ESCP_Spriggan_RaidsCooldown>Enable a 1 day cooldown between spriggan attacks when trees are cut.</ESCP_Spriggan_RaidsCooldown>
 	
 	<ESCP_Spriggan_InitialAttackChance>The initial chance that a spriggan attack occurs when a tree is cut down.</ESCP_Spriggan_InitialAttackChance>
 	<ESCP_Spriggan_IncreasedAttackChance>The amount the chance of attacks increases every time a tree is cut.</ESCP_Spriggan_IncreasedAttackChance>
