@@ -22,7 +22,7 @@
 	
 						<AchievementsExpanded.Reward_MapIncident>
 							<defName>ESCP_RewardSprigganWandersIn</defName>
-							<label>spriggan wanders in</label>
+							<label>Spriggan wanders in</label>
 							<tab>ESCP_AchievementsTab</tab>
 							
 							<cost>50</cost>
