@@ -31,7 +31,7 @@ namespace ESCP_Spriggan
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            if (!takingAgeDamage)
+            if (!takingAgeDamage && GenDate.DaysPassedSinceSettle > 1)
             {
                 if (ModSettings_Utility.ESCP_Spriggan_ToxicAttackChance() && previousMap.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
                 {
