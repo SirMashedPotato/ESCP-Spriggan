@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan_Tundra</defName>
+		<label>tundra spriggan</label>
+		<description>Spriggans are creatures of wood and psychic energy, concentrated into a being that is immensely concerned with the well being of plant life. Often attacking anything threatening or damaging forested areas, as well as hiding or laying in ambush in such areas, spriggans come in all shapes and sizes living in most biomes that have some vegetation.\n\nAlthough a spriggan may only have its wood skin for protection, they are still quite a threat to people if angered. Long sharp claws as well as the ability to call upon animals to protect the forest makes them a great threat to trespassers, or a boon to those willing to risk everything to befriend one of them. Spriggans also have an innate healing ability when close to death.\n\nBy far the largest and slowest spriggan species, this lumbering giant's attacks can shatter bones and buildings like a falling tree. Found in most cold regions that support plant life.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTaproot_Tundra</ThingDef>
+			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree_Tundra</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MoveSpeed>4.2</MoveSpeed>
+			<ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<MarketValue>650</MarketValue>
+		</statBases>
+		<tools Inherit="False">
+		  <!-- hands -->
+		  <li>
+			<label>fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>1.5</cooldownTime>
+			<linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>18</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>15</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>15</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <!-- head -->
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>5</milkIntervalDays>
+				<milkAmount>18</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
+				<maxRange>10</maxRange>
+				<maxNumberControlled>1</maxNumberControlled>
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+				<soundDef>PsychicInsanityLanceCast</soundDef>
+			</li>
+		</comps>
+		<race>
+			<baseBodySize>2.2</baseBodySize>
+			<baseHealthScale>2.1</baseHealthScale>
+			<wildness>0.90</wildness>
+			<wildBiomes>
+				<BorealForest>0.05</BorealForest>
+				<Tundra>0.03</Tundra>
+				<ColdBog>0.02</ColdBog>
+				<!-- Biomes! -->
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealArchipelago>
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TundraIsland>
+				<BiomesIslands_TundraArchipelago MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TundraArchipelago>
+				<!-- Regrowth -->
+				<RG-VIS_VulcanicIceSheet MayRequire="ReGrowth.BOTR.VolcanicIceSheet">0.03</RG-VIS_VulcanicIceSheet>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_AlpineMeadow>
+				<!-- Alpha Biomes -->
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.07</AB_PropaneLakes>
+				<!-- Winter taiga -->
+				<WinterTaiga MayRequire="reel.FrozenForest">0.05</WinterTaiga>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>200</combatPower>
+		<defName>ESCP_Spriggan_Tundra</defName>
+		<label>tundra spriggan</label>
+		<race>ESCP_Spriggan_Tundra</race>
+		<lifeStages>
+		  <li>
+			<label>tundra spriggan sproutling</label>
+			<labelPlural>tundra spriggan sproutlings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/TundraSpriggan</texPath>
+			  <drawSize>2.1</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>2.1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>tundra spriggan sapling</label>
+			<labelPlural>tundra spriggan saplings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/TundraSpriggan</texPath>
+			  <drawSize>2.3</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.3, 0.3)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>2.3</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/TundraSpriggan</texPath>
+			  <drawSize>2.4</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>2.4</drawSize>
+			</dessicatedBodyGraphicData>
+			<butcherBodyPart>
+				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+				<thing>ESCP_SprigganTaproot_Tundra</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

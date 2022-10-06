@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan_Burnt</defName>
+		<label>burnt spriggan</label>
+		<description>Spriggans are creatures of wood and psychic energy, concentrated into a being that is immensely concerned with the well being of plant life. Often attacking anything threatening or damaging forested areas, as well as hiding or laying in ambush in such areas, spriggans come in all shapes and sizes living in most biomes that have some vegetation.\n\nAlthough a spriggan may only have its wood skin for protection, they are still quite a threat to people if angered. Long sharp claws as well as the ability to call upon animals to protect the forest makes them a great threat to trespassers, or a boon to those willing to risk everything to befriend one of them. Spriggans also have an innate healing ability when close to death.\n\nThese spriggans have survived a forest fire and now seek vengeance on anything that "might" be the cause for their tortured existence. Having embraced the fire that destroyed their home they are now immune to it, and can even conjure flames to throw at others to hurt them as they have been hurt.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTaproot_Burnt</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<Flammability>0</Flammability>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
+		</statBases>
+		<tools Inherit="False">
+		  <!-- hands -->
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			<extraMeleeDamages>
+			  <li>
+				<def>Flame</def>
+				<amount>10</amount>
+				<chance>0.2</chance>
+			  </li>
+			</extraMeleeDamages>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			<extraMeleeDamages>
+			  <li>
+				<def>Flame</def>
+				<amount>10</amount>
+				<chance>0.2</chance>
+			  </li>
+			</extraMeleeDamages>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>10</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <!-- head -->
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<verbs>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ESCP_SprigganFireball</defaultProjectile>
+				<warmupTime>1.8</warmupTime>
+				<range>19.9</range>
+				<soundCast>ESCP_Spriggan_Fireball</soundCast>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>false</canTargetLocations>
+				</targetParams>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<accuracyTouch>0.60</accuracyTouch>
+				<accuracyShort>0.80</accuracyShort>
+				<accuracyMedium>0.60</accuracyMedium>
+				<accuracyLong>0.30</accuracyLong>
+				<defaultCooldownTime>2.4</defaultCooldownTime>
+			</li>
+		</verbs>
+		<comps>
+		</comps>
+		<race>
+			<deathActionWorkerClass>ESCP_Spriggan.DeathActionWorker_BurntSpriggan</deathActionWorkerClass>
+			<wildBiomes>
+				<!-- Naturally occuring in MorrowRim biomes, but also appears from burnt trees in every biome -->
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.025</MorrowRim_Ashlands>
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.025</MorrowRim_BlightedAshlands>
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.05</MorrowRim_VolcanicAshlands>
+				<!-- Regrowth -->
+				<RG-W_Wasteland MayRequire="ReGrowth.BOTR.Wastelands">0.025</RG-W_Wasteland>
+				<!-- Alpha Biomes -->
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.05</AB_PyroclasticConflagration>
+				<!-- Advanced Biomes -->
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.05</Volcano>
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.05</Wasteland>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>170</combatPower>
+		<defName>ESCP_Spriggan_Burnt</defName>
+		<label>burnt spriggan</label>
+		<race>ESCP_Spriggan_Burnt</race>
+		<lifeStages>
+		  <li>
+			<label>burnt spriggan sproutling</label>
+			<labelPlural>burnt spriggan sproutlings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.0</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>burnt spriggan sapling</label>
+			<labelPlural>burnt spriggan saplings</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.3, 0.3)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+			  <drawSize>1.4</drawSize>
+			</dessicatedBodyGraphicData>
+			<butcherBodyPart>
+				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+				<thing>ESCP_SprigganTaproot_Burnt</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!-- Projectile -->
+	
+	<ThingDef>
+		<defName>ESCP_SprigganFireball</defName>
+		<tickerType>Normal</tickerType>
+		<thingClass>Bullet</thingClass>
+		<category>Projectile</category>
+		<label>spriggan fireball</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Projectile/ESCP_FireBall</texPath>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>0.3</stoppingPower>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>
