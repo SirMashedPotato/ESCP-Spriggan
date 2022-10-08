@@ -8,7 +8,7 @@
 		  <MoveSpeed>4.7</MoveSpeed>
 		  <Flammability>1.4</Flammability>
 		  <PsychicSensitivity>1.5</PsychicSensitivity>
-		  <ToxicResistance>0</ToxicResistance>
+		  <ToxicResistance>1</ToxicResistance>
 		  <ArmorRating_Blunt>0.06</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 		  <MarketValue>500</MarketValue>
