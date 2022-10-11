@@ -43,7 +43,7 @@
 				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalIsland>
 				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalArchipelago>
 				<!-- Regrowth -->
-				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.07</RG-AF_AspenForest>
+				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.07</RG_AspenForest>
 				<!-- More Vanilla Biomes -->
 				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_AlpineMeadow>
 				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CloudForest>

@@ -126,7 +126,7 @@
 				<BiomesIslands_TundraArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TundraArchipelago>
 				<!-- Regrowth -->
 				<RG-VIS_VulcanicIceSheet MayRequire="ReGrowth.BOTR.VolcanicIceSheet">0.005</RG-VIS_VulcanicIceSheet>
-				<RG-AF_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.005</RG-AF_AspenForest>
+				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.005</RG_AspenForest>
 				<!-- More Vanilla Biomes -->
 				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_AlpineMeadow>
 				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CloudForest>
