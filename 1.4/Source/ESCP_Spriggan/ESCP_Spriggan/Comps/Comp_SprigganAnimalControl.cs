@@ -26,7 +26,7 @@ namespace ESCP_Spriggan
         {
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
 
-            if (parent.Spawned && ModSettings_Utility.ESCP_Spriggan_EnableAnimalControl() && timesActivated < Props.maxNumberControlled && Rand.Chance(Props.chance))
+            if (parent.Spawned && ESCP_Spriggan_ModSettings.EnableAnimalControl && timesActivated < Props.maxNumberControlled && Rand.Chance(Props.chance))
             {
                 Pawn p = parent as Pawn;
                 if (!p.Dead && p.Faction == null && dinfo.Instigator != null && dinfo.Instigator.def != null && dinfo.Instigator.def.race != null && dinfo.Instigator.def.race.Humanlike)
@@ -40,8 +40,8 @@ namespace ESCP_Spriggan
                         target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
                         if (Props.fleckDef != null)
                         {
-                            FleckMaker.AttachedOverlay(parent, this.Props.fleckDef, Vector3.zero, 1f, -1f);
-                            FleckMaker.AttachedOverlay(target, this.Props.fleckDef, Vector3.zero, 1f, -1f);
+                            FleckMaker.AttachedOverlay(parent, Props.fleckDef, Vector3.zero, 1f, -1f);
+                            FleckMaker.AttachedOverlay(target, Props.fleckDef, Vector3.zero, 1f, -1f);
                         }
                         if (Props.soundDef != null)
                         {

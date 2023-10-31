@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_EarthMother</defName>
 		<label>spriggan earth mother</label>
@@ -16,70 +15,70 @@
 			<MarketValue>650</MarketValue>
 		</statBases>
 		<tools Inherit="False">
-		  <!-- hands -->
-		  <li>
-			<label>fist</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>16</power>
-			<cooldownTime>1.5</cooldownTime>
-			<linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>18</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<label>left claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>18</power>
-			<cooldownTime>1.2</cooldownTime>
-			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>10</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<label>right claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>18</power>
-			<cooldownTime>1.2</cooldownTime>
-			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>10</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <!-- head -->
-		  <li>
-			<label>head</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>9</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			<chanceFactor>0.2</chanceFactor>
-		  </li>
+			<!-- hands -->
+			<li>
+				<label>fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>18</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<!-- head -->
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
 		</tools>
 		<comps>
 			<li Class="CompProperties_Milkable">
@@ -127,6 +126,7 @@
 				<!-- Regrowth -->
 				<RG-VIS_VulcanicIceSheet MayRequire="ReGrowth.BOTR.VolcanicIceSheet">0.005</RG-VIS_VulcanicIceSheet>
 				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.005</RG_AspenForest>
+				<RG_BoilingForest MayRequire="regrowth.botr.boilingforest">0.005</RG_BoilingForest>
 				<!-- More Vanilla Biomes -->
 				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_AlpineMeadow>
 				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CloudForest>
@@ -146,60 +146,58 @@
 			</wildBiomes>
 		</race>
 	</ThingDef>
-
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
 		<combatPower>200</combatPower>
 		<defName>ESCP_Spriggan_EarthMother</defName>
 		<label>spriggan earth mother</label>
 		<race>ESCP_Spriggan_EarthMother</race>
 		<lifeStages>
-		  <li>
-			<label>spriggan earth mother sproutling</label>
-			<labelPlural>spriggan earth mother sproutlings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
-			  <drawSize>1.4</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>spriggan earth mother sapling</label>
-			<labelPlural>spriggan earth mother saplings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
-			  <drawSize>1.6</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.3, 0.3)</volume>
-				<offset>(0,0,-0.3)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.6</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
-			  <drawSize>1.8</drawSize>
-			  <shadowData>
-				<volume>(0.4, 0.4, 0.4)</volume>
-				<offset>(0,0,-0.1)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.8</drawSize>
-			</dessicatedBodyGraphicData>
-			<butcherBodyPart>
-				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot_Mother</thing>
-			</butcherBodyPart>
-		  </li>
+			<li>
+				<label>spriggan earth mother sproutling</label>
+				<labelPlural>spriggan earth mother sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+					<drawSize>1.4</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>spriggan earth mother sapling</label>
+				<labelPlural>spriggan earth mother saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+					<drawSize>1.6</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/SprigganEarthMother</texPath>
+					<drawSize>1.8</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.8</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot_Mother</thing>
+				</butcherBodyPart>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-
 </Defs>

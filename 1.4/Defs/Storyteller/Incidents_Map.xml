@@ -41,7 +41,7 @@
 		  <li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>ESCP_Spriggan.IncidentWorker_SprigganAttack</workerClass>
-		<baseChance>0.5</baseChance>	<!-- possibly make 0 if it's only triggered from cutting trees -->
+		<baseChance>0.05</baseChance>	<!-- possibly make 0 if it's only triggered from cutting trees -->
 		<category>ThreatBig</category>
 		<minRefireDays>30</minRefireDays>
 		<pointsScaleable>true</pointsScaleable>

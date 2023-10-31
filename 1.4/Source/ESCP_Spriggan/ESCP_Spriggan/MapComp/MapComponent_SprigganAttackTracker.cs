@@ -13,7 +13,7 @@ namespace ESCP_Spriggan
         public override void MapComponentTick()
         {
             base.MapComponentTick();
-            if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance())
+            if (ESCP_Spriggan_ModSettings.EnableAttackChance)
             {
                 if (currentTicks++ >= targetTicks)
                 {
@@ -24,7 +24,7 @@ namespace ESCP_Spriggan
                     currentTicks = 0;
                 }
             }
-            if(ModSettings_Utility.ESCP_Spriggan_RaidsCooldown() && raidCooldownTicks < targetTicks)
+            if(ESCP_Spriggan_ModSettings.RaidsCooldown && raidCooldownTicks < targetTicks)
             {
                 raidCooldownTicks++;
             }
@@ -32,7 +32,7 @@ namespace ESCP_Spriggan
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref currentAttackChance, "ESCP_Spriggan_AttackChance", ModSettings_Utility.ESCP_Spriggan_InitialAttackChance());
+            Scribe_Values.Look(ref currentAttackChance, "ESCP_Spriggan_AttackChance", ESCP_Spriggan_ModSettings.InitialAttackChance);
             Scribe_Values.Look(ref raidCooldownTicks, "ESCP_Spriggan_RaidCooldownTicks", targetTicks);
             base.ExposeData();
         }
@@ -44,26 +44,26 @@ namespace ESCP_Spriggan
 
         public static void DecreaseChance()
         {
-            currentAttackChance = Math.Max(currentAttackChance - ModSettings_Utility.ESCP_Spriggan_DecreasedAttackChance(), ModSettings_Utility.ESCP_Spriggan_InitialAttackChance());
-            if (ModSettings_Utility.ESCP_Spriggan_DebugAttackChance())
+            currentAttackChance = Math.Max(currentAttackChance - ESCP_Spriggan_ModSettings.DecreasedAttackChance, ESCP_Spriggan_ModSettings.InitialAttackChance);
+            if (ESCP_Spriggan_ModSettings.DebugAttackChance)
             {
-                Log.Message("Chance of a spriggan attack reduced by: " + ModSettings_Utility.ESCP_Spriggan_DecreasedAttackChance() + ", to: " + currentAttackChance);
+                Log.Message("Chance of a spriggan attack reduced by: " + ESCP_Spriggan_ModSettings.DecreasedAttackChance + ", to: " + currentAttackChance);
             }
         }
 
         public static void IncreaseChance()
         {
-            currentAttackChance = Math.Min(currentAttackChance + ModSettings_Utility.ESCP_Spriggan_IncreasedAttackChance(), 1f);
-            if (ModSettings_Utility.ESCP_Spriggan_DebugAttackChance())
+            currentAttackChance = Math.Min(currentAttackChance + ESCP_Spriggan_ModSettings.EIncreasedAttackChance, 1f);
+            if (ESCP_Spriggan_ModSettings.DebugAttackChance)
             {
-                Log.Message("Chance of a spriggan attack increased by: " + ModSettings_Utility.ESCP_Spriggan_IncreasedAttackChance() + ", to: " + currentAttackChance);
+                Log.Message("Chance of a spriggan attack increased by: " + ESCP_Spriggan_ModSettings.EIncreasedAttackChance + ", to: " + currentAttackChance);
             }
         }
 
         public static void ResetChance()
         {
-            currentAttackChance = ModSettings_Utility.ESCP_Spriggan_InitialAttackChance();
-            if (ModSettings_Utility.ESCP_Spriggan_DebugAttackChance())
+            currentAttackChance = ESCP_Spriggan_ModSettings.InitialAttackChance;
+            if (ESCP_Spriggan_ModSettings.DebugAttackChance)
             {
                 Log.Message("Chance of a spriggan attack has been reset to: " + currentAttackChance);
             }
@@ -85,8 +85,8 @@ namespace ESCP_Spriggan
         }
 
         private int currentTicks = 0;
-        private static readonly int targetTicks = 60000;   //should be a day
+        private static readonly int targetTicks = 60000;   //a day
         private static int raidCooldownTicks = targetTicks;
-        public static float currentAttackChance = ModSettings_Utility.ESCP_Spriggan_InitialAttackChance();
+        public static float currentAttackChance = ESCP_Spriggan_ModSettings.InitialAttackChance;
     }
 }

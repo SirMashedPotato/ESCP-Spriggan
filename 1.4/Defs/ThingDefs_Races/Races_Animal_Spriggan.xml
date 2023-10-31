@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan</defName>
 		<label>spriggan</label>
@@ -44,6 +43,7 @@
 				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TropicalArchipelago>
 				<!-- Regrowth -->
 				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.07</RG_AspenForest>
+				<RG_BoilingForest MayRequire="regrowth.botr.boilingforest">0.05</RG_BoilingForest>
 				<!-- More Vanilla Biomes -->
 				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_AlpineMeadow>
 				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CloudForest>
@@ -53,59 +53,57 @@
 			</wildBiomes>
 		</race>
 	</ThingDef>
-
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
 		<defName>ESCP_Spriggan</defName>
 		<label>spriggan</label>
 		<race>ESCP_Spriggan</race>
 		<lifeStages>
-		  <li>
-			<label>spriggan sproutling</label>
-			<labelPlural>spriggan sproutlings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>spriggan sapling</label>
-			<labelPlural>spriggan saplings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.3, 0.3)</volume>
-				<offset>(0,0,-0.3)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.4, 0.4, 0.4)</volume>
-				<offset>(0,0,-0.1)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-			<butcherBodyPart>
-				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot</thing>
-			</butcherBodyPart>
-		  </li>
+			<li>
+				<label>spriggan sproutling</label>
+				<labelPlural>spriggan sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>spriggan sapling</label>
+				<labelPlural>spriggan saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot</thing>
+				</butcherBodyPart>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-
 </Defs>

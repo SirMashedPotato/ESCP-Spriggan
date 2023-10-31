@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_Anima</defName>
 		<label>anima spriggan</label>
@@ -24,71 +23,68 @@
 				<thoughtDef>ESCP_AnimaSprigganPsychicSoothe</thoughtDef>
 			</li>
 			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
-				<maxRange>20</maxRange>	<!-- increased coimpared to other spriggans -->
+				<maxRange>20</maxRange>
+				<!-- increased coimpared to other spriggans -->
 				<maxNumberControlled>1</maxNumberControlled>
 				<fleckDef>PsycastPsychicEffect</fleckDef>
 				<soundDef>PsychicInsanityLanceCast</soundDef>
 			</li>
 		</comps>
 		<race>
-			<wildBiomes>
-				<!-- Event only -->
-			</wildBiomes>
+			<!-- Event only -->
 		</race>
 	</ThingDef>
-
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
 		<defName>ESCP_Spriggan_Anima</defName>
 		<label>anima spriggan</label>
 		<race>ESCP_Spriggan_Anima</race>
 		<lifeStages>
-		  <li>
-			<label>anima spriggan sproutling</label>
-			<labelPlural>anima spriggan sproutlings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>anima spriggan sapling</label>
-			<labelPlural>anima spriggan saplings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.3, 0.3)</volume>
-				<offset>(0,0,-0.3)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.4, 0.4, 0.4)</volume>
-				<offset>(0,0,-0.1)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-			<butcherBodyPart>
-				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot_Anima</thing>
-			</butcherBodyPart>
-		  </li>
+			<li>
+				<label>anima spriggan sproutling</label>
+				<labelPlural>anima spriggan sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>anima spriggan sapling</label>
+				<labelPlural>anima spriggan saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/AnimaSpriggan</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot_Anima</thing>
+				</butcherBodyPart>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-
 </Defs>

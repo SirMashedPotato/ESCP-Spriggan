@@ -72,7 +72,6 @@
     <Compile Include="IncidentWorkers\IncidentWorker_AnimaSprigganWandersIn.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_SprigganAttack.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_SprigganWandersIn.cs" />
-    <Compile Include="ModSettings\ModSettings_Utility.cs" />
     <Compile Include="ModSettings\ESCP_Spriggan_Mod.cs" />
     <Compile Include="ModSettings\ESCP_Spriggan_ModSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

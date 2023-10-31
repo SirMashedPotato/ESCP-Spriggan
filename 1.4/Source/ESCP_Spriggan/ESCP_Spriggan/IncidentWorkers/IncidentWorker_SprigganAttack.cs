@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using Verse;
 using RimWorld;
-using System.Reflection.Emit;
-using System.Linq;
 
 namespace ESCP_Spriggan
 {
@@ -17,10 +13,8 @@ namespace ESCP_Spriggan
 				return false;
 			}
 			Map map = (Map)parms.target;
-			PawnKindDef pawnKindDef;
-			IntVec3 intVec;
-			return ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out pawnKindDef) && RCellFinder.TryFindRandomPawnEntryCell(out intVec, map, CellFinder.EdgeRoadChance_Animal, false, null);
-		}
+            return ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out PawnKindDef pawnKindDef) && RCellFinder.TryFindRandomPawnEntryCell(out IntVec3 intVec, map, CellFinder.EdgeRoadChance_Animal, false, null);
+        }
 
 		protected override bool TryExecuteWorker(IncidentParms parms)
 		{
@@ -35,7 +29,7 @@ namespace ESCP_Spriggan
 			{
 				return false;
 			}
-			List<Pawn> list = ManhunterPackIncidentUtility.GenerateAnimals(pawnKind, map.Tile, parms.points * PointsFactor);
+			List<Pawn> list = ManhunterPackIncidentUtility.GenerateAnimals(pawnKind, map.Tile, parms.points * ESCP_Spriggan_ModSettings.RaidSizeFactor);
 			Rot4 rot = Rot4.FromAngleFlat((map.Center - spawnCenter).AngleFlat);
 			for (int i = 0; i < list.Count; i++)
 			{
@@ -51,8 +45,6 @@ namespace ESCP_Spriggan
 			LessonAutoActivator.TeachOpportunity(ConceptDefOf.AllowedAreas, OpportunityType.Important);
 			return true;
 		}
-
-		private const float PointsFactor = 3f;
 
 		private const int AnimalsStayDurationMin = 300000;
 

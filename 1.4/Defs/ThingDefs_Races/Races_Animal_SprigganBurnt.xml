@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_Burnt</defName>
 		<label>burnt spriggan</label>
@@ -14,67 +13,67 @@
 			<ComfyTemperatureMax>100</ComfyTemperatureMax>
 		</statBases>
 		<tools Inherit="False">
-		  <!-- hands -->
-		  <li>
-			<label>left claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>12</power>
-			<cooldownTime>1.2</cooldownTime>
-			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
-			<extraMeleeDamages>
-			  <li>
-				<def>Flame</def>
-				<amount>10</amount>
-				<chance>0.2</chance>
-			  </li>
-			</extraMeleeDamages>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>10</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<label>right claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>12</power>
-			<cooldownTime>1.2</cooldownTime>
-			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
-			<extraMeleeDamages>
-			  <li>
-				<def>Flame</def>
-				<amount>10</amount>
-				<chance>0.2</chance>
-			  </li>
-			</extraMeleeDamages>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>10</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <!-- head -->
-		  <li>
-			<label>head</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>9</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			<chanceFactor>0.2</chanceFactor>
-		  </li>
+			<!-- hands -->
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<!-- head -->
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
 		</tools>
 		<verbs>
 			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
@@ -106,7 +105,7 @@
 				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.025</MorrowRim_BlightedAshlands>
 				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.05</MorrowRim_VolcanicAshlands>
 				<!-- Regrowth -->
-				<RG-W_Wasteland MayRequire="ReGrowth.BOTR.Wastelands">0.025</RG-W_Wasteland>
+				<RG_BoilingForest MayRequire="regrowth.botr.boilingforest">0.025</RG_BoilingForest>
 				<!-- Alpha Biomes -->
 				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.05</AB_PyroclasticConflagration>
 				<!-- Advanced Biomes -->
@@ -115,64 +114,61 @@
 			</wildBiomes>
 		</race>
 	</ThingDef>
-
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
 		<combatPower>170</combatPower>
 		<defName>ESCP_Spriggan_Burnt</defName>
 		<label>burnt spriggan</label>
 		<race>ESCP_Spriggan_Burnt</race>
 		<lifeStages>
-		  <li>
-			<label>burnt spriggan sproutling</label>
-			<labelPlural>burnt spriggan sproutlings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>burnt spriggan sapling</label>
-			<labelPlural>burnt spriggan saplings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.3, 0.3)</volume>
-				<offset>(0,0,-0.3)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.4, 0.4, 0.4)</volume>
-				<offset>(0,0,-0.1)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-			<butcherBodyPart>
-				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot_Burnt</thing>
-			</butcherBodyPart>
-		  </li>
+			<li>
+				<label>burnt spriggan sproutling</label>
+				<labelPlural>burnt spriggan sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>burnt spriggan sapling</label>
+				<labelPlural>burnt spriggan saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BurntSpriggan</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot_Burnt</thing>
+				</butcherBodyPart>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-	
 	<!-- Projectile -->
-	
 	<ThingDef>
 		<defName>ESCP_SprigganFireball</defName>
 		<tickerType>Normal</tickerType>
@@ -193,5 +189,4 @@
 			<speed>50</speed>
 		</projectile>
 	</ThingDef>
-
 </Defs>

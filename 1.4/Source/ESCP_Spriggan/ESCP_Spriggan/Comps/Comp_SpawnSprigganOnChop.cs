@@ -19,13 +19,13 @@ namespace ESCP_Spriggan
 
         public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ModSettings_Utility.ESCP_Spriggan_FireAttackChance());
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ESCP_Spriggan_ModSettings.FireAttackChance);
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
         }
 
         public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
         {
-            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ModSettings_Utility.ESCP_Spriggan_FireAttackChance());
+            takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ESCP_Spriggan_ModSettings.FireAttackChance);
             base.PostPreApplyDamage(dinfo, out absorbed);
         }
 
@@ -33,15 +33,15 @@ namespace ESCP_Spriggan
         {
             if (!takingAgeDamage && GenDate.DaysPassedSinceSettle > 1)
             {
-                if (ModSettings_Utility.ESCP_Spriggan_ToxicAttackChance() && previousMap.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout))
+                if (ESCP_Spriggan_ModSettings.ToxicAttackChance && previousMap.gameConditionManager.ActiveConditions.Any((GameCondition x) => x.def.conditionClass == typeof(GameCondition_ToxicFallout)))
                 {
                     return;
                 }
                 //check smol attack
-                if (ModSettings_Utility.ESCP_Spriggan_EnableChopAttack())
+                if (ESCP_Spriggan_ModSettings.EnableChopAttack)
                 {
                     Plant p = parent as Plant;
-                    if(!ModSettings_Utility.ESCP_Spriggan_SownAttackChance() && p.sown)
+                    if(!ESCP_Spriggan_ModSettings.SownAttackChance && p.sown)
                     {
                         return;
                     }
@@ -51,7 +51,7 @@ namespace ESCP_Spriggan
                         {
                             if (parent.def.ToString() == ov.treeDefName)
                             {
-                                if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                                if (Rand.Chance(ov.overrideChance ? ov.overriddenChance : ESCP_Spriggan_ModSettings.EnableChopChance))
                                 {
                                     SpawnAngrySpriggan(previousMap, parent, PawnKindDef.Named(ov.kindDefName));
                                     base.PostDestroy(mode, previousMap);
@@ -61,7 +61,7 @@ namespace ESCP_Spriggan
                             }
                         }
                     }
-                    if (Rand.Chance(ModSettings_Utility.ESCP_Spriggan_EnableChopChance()))
+                    if (Rand.Chance(ESCP_Spriggan_ModSettings.EnableChopChance))
                     {
                         SpawnAngrySpriggan(previousMap, parent);
                         base.PostDestroy(mode, previousMap);
@@ -69,13 +69,13 @@ namespace ESCP_Spriggan
                     }
                 }
 
-                if (ModSettings_Utility.ESCP_Spriggan_EnableAttackChance() && (!ModSettings_Utility.ESCP_Spriggan_RaidsCooldown() || MapComponent_SprigganAttackTracker.CooldownReady()))
+                if (ESCP_Spriggan_ModSettings.EnableAttackChance && (!ESCP_Spriggan_ModSettings.RaidsCooldown || MapComponent_SprigganAttackTracker.CooldownReady()))
                 {
                     MapComponent_SprigganAttackTracker.IncreaseChance();
                     if (Rand.Chance(MapComponent_SprigganAttackTracker.GetChance()))
                     {
                         TriggerAttack(previousMap);
-                        if (ModSettings_Utility.ESCP_Spriggan_ResetAttackChance())
+                        if (ESCP_Spriggan_ModSettings.ResetAttackChance)
                         {
                             MapComponent_SprigganAttackTracker.ResetChance();
                         }

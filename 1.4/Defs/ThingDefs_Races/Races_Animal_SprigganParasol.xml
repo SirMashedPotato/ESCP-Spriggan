@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="ESCP_SprigganThingBase">
 		<defName>ESCP_Spriggan_Parasol</defName>
 		<label>parasol spriggan</label>
@@ -48,59 +47,57 @@
 			</wildBiomes>
 		</race>
 	</ThingDef>
-
 	<PawnKindDef ParentName="ESCP_SprigganKindBase">
 		<defName>ESCP_Spriggan_Parasol</defName>
 		<label>parasol spriggan</label>
 		<race>ESCP_Spriggan_Parasol</race>
 		<lifeStages>
-		  <li>
-			<label>parasol spriggan sproutling</label>
-			<labelPlural>parasol spriggan sproutlings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.0</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>parasol spriggan sapling</label>
-			<labelPlural>parasol spriggan saplings</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.3, 0.3)</volume>
-				<offset>(0,0,-0.3)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.2</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.4, 0.4, 0.4)</volume>
-				<offset>(0,0,-0.1)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-			<butcherBodyPart>
-				<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
-				<thing>ESCP_SprigganTaproot_Parasol</thing>
-			</butcherBodyPart>
-		  </li>
+			<li>
+				<label>parasol spriggan sproutling</label>
+				<labelPlural>parasol spriggan sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>parasol spriggan sapling</label>
+				<labelPlural>parasol spriggan saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/ParasolSpriggan</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot_Parasol</thing>
+				</butcherBodyPart>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-
 </Defs>
