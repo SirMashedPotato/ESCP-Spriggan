@@ -11,7 +11,7 @@ namespace ESCP_Spriggan
 		{
 			get
 			{
-				return (CompProperties_SpawnSprigganOnChop)this.props;
+				return (CompProperties_SpawnSprigganOnChop)props;
 			}
 		}
 
@@ -23,10 +23,10 @@ namespace ESCP_Spriggan
             base.PostPostApplyDamage(dinfo, totalDamageDealt);
         }
 
-        public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
+        public override void PostPreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
             takingAgeDamage = dinfo.Def == DamageDefOf.Rotting || dinfo.Def == DamageDefOf.Deterioration || (dinfo.Def == DamageDefOf.Flame && !ESCP_Spriggan_ModSettings.FireAttackChance);
-            base.PostPreApplyDamage(dinfo, out absorbed);
+            base.PostPreApplyDamage(ref dinfo, out absorbed);
         }
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)

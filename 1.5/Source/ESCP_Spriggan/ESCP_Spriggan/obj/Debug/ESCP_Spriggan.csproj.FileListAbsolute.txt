@@ -6,3 +6,7 @@ J:\Modding\Github\ESCP-Spriggan\1.4\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug
 J:\Modding\Github\ESCP-Spriggan\1.4\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.csproj.CoreCompileInputs.cache
 J:\Modding\Github\ESCP-Spriggan\1.4\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.dll
 J:\Modding\Github\ESCP-Spriggan\1.4\Assemblies\ESCP_Spriggan.dll
+J:\Modding\Github\ESCP-Spriggan\1.5\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.csproj.AssemblyReference.cache
+J:\Modding\Github\ESCP-Spriggan\1.5\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.csproj.CoreCompileInputs.cache
+J:\Modding\Github\ESCP-Spriggan\1.5\Source\ESCP_Spriggan\ESCP_Spriggan\obj\Debug\ESCP_Spriggan.dll
+J:\Modding\Github\ESCP-Spriggan\1.5\Assemblies\ESCP_Spriggan.dll

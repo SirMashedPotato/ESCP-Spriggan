@@ -1,6 +1,8 @@
 ﻿using System;
 using Verse;
 using RimWorld;
+using Verse.AI.Group;
+using System.Collections.Generic;
 
 namespace ESCP_Spriggan
 {
@@ -23,10 +25,18 @@ namespace ESCP_Spriggan
             }
         }
 
-        public override void PawnDied(Corpse corpse)
+        public override void PawnDied(Corpse corpse, Lord prevLord)
         {
-            GenExplosion.DoExplosion(corpse.Position, corpse.Map, 1.9f, DamageDefOf.Flame, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, null, false, null, 0f, 1, 0f, false, null, null, null, true, 1f, 0f, true, null, 1f);
+            GenExplosion.DoExplosion(
+                            center: corpse.Position,
+                            map: corpse.Map,
+                            radius: 1.9f,
+                            damType: DamageDefOf.Flame,
+                            damAmount: 6,
+                            instigator: corpse.InnerPawn,
+                            ignoredThings: new List<Thing> { corpse },
+                            damageFalloff: true
+                            );
         }
-
     }
 }

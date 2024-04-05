@@ -15,5 +15,6 @@
 	<v1.5>
 		<li>Common</li>
 		<li>1.5</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology,Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Anomaly">Mods/SprigganTrees</li>	
 	</v1.5>
 </loadFolders>
