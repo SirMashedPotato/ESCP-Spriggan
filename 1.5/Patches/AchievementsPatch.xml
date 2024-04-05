@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>ESCP_AchievementsTab</defName>
+							<label>ESCP</label>
+						</AchievementsExpanded.AchievementTabDef>
+	
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>ESCP_RewardSprigganWandersIn</defName>
+							<label>Spriggan wanders in</label>
+							<tab>ESCP_AchievementsTab</tab>
+							
+							<cost>50</cost>
+							<incident>ESCP_Spriggan_SprigganWandersIn</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+		
+						<!-- Taming -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>ESCP_AchievementSpriggan_TameFirstSpriggan</defName>
+							<label>Befriend the Forest</label>
+							<description>Tame your first spriggan of any kind</description>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<requireAll>false</requireAll>
+								<kindDefs>
+								
+									<li>
+										<key>ESCP_Spriggan</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Anima</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Bog</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Burnt</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_EarthMother</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Matron</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Parasol</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Thorni</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Tundra</key>
+										<value>1</value>
+									</li>
+									
+								</kindDefs>
+								
+							</tracker>
+
+							<texPath>Achievements/ESCP_AchievementSpriggan_TameFirstSpriggan</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>ESCP_AchievementSpriggan_TameAllSpriggan</defName>
+							<label>Become the Forest</label>
+							<description>Have at least one of each kind of spriggan at the same tame</description>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+								
+									<li>
+										<key>ESCP_Spriggan</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Anima</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Bog</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Burnt</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_EarthMother</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Matron</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Parasol</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Thorni</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>ESCP_Spriggan_Tundra</key>
+										<value>1</value>
+									</li>
+									
+								</kindDefs>
+								
+							</tracker>
+
+							<texPath>Achievements/ESCP_AchievementSpriggan_TameAllSpriggan</texPath>
+							<points>50</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Killing -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>ESCP_AchievementSpriggan_KillFirst</defName>
+							<label>Anger the Forest</label>
+							<description>Kill your first spriggan of any kind</description>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
+							<tracker Class="Mashed_VanillaAchievementsExpanded.KillTracker_WithList">
+								<raceDefList>
+									<li>ESCP_Spriggan</li>
+									<li>ESCP_Spriggan_Anima</li>
+									<li>ESCP_Spriggan_Bog</li>
+									<li>ESCP_Spriggan_Burnt</li>
+									<li>ESCP_Spriggan_EarthMother</li>
+									<li>ESCP_Spriggan_Matron</li>
+									<li>ESCP_Spriggan_Parasol</li>
+									<li>ESCP_Spriggan_Thorni</li>
+									<li>ESCP_Spriggan_Tundra</li>
+								</raceDefList>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/ESCP_AchievementSpriggan_KillFirst</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>ESCP_AchievementSpriggan_KillEarthMother</defName>
+							<label>Kill the Forest</label>
+							<description>Successfully kill a spriggan earth mother</description>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>ESCP_Spriggan_EarthMother</raceDef>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/ESCP_AchievementSpriggan_KillEarthMother</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

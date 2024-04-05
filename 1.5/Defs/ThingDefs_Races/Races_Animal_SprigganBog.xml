@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ESCP_SprigganThingBase">
+		<defName>ESCP_Spriggan_Bog</defName>
+		<label>bog spriggan</label>
+		<description>Spriggans are creatures of wood and psychic energy, concentrated into a being that is immensely concerned with the well being of plant life. Often attacking anything threatening or damaging forested areas, as well as hiding or laying in ambush in such areas, spriggans come in all shapes and sizes living in most biomes that have some vegetation.\n\nAlthough a spriggan may only have its wood skin for protection, they are still quite a threat to people if angered. Long sharp claws as well as the ability to call upon animals to protect the forest makes them a great threat to trespassers, or a boon to those willing to risk everything to befriend one of them. Spriggans also have an innate healing ability when close to death.\n\nBog spriggans appear in most swamps. They are covered in moss and hard to see in the dense vegetation, but otherwise still quite similar to its temperate cousin.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ESCP_SprigganTaproot_Bog</ThingDef>
+			<ThingDef MayRequire="Ludeon.RimWorld.Ideology">ESCP_SprigganTree_Bog</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tools Inherit="False">
+			<!-- hands -->
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>ScratchToxic</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>ScratchToxic</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<!-- head -->
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>ESCP_SprigganSap</milkDef>
+				<milkIntervalDays>5</milkIntervalDays>
+				<milkAmount>10</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganAnimalControl">
+				<maxRange>10</maxRange>
+				<maxNumberControlled>1</maxNumberControlled>
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+				<soundDef>PsychicInsanityLanceCast</soundDef>
+			</li>
+		</comps>
+		<race>
+			<wildBiomes>
+				<ColdBog>0.05</ColdBog>
+				<TemperateSwamp>0.07</TemperateSwamp>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<!-- MorrowRim -->
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.07</MorrowRim_AshSwamp>
+				<!-- More Vanilla Biomes -->
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_Marsh>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_CoastalDunes>
+				<!-- Advanced Biomes -->
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.05</Wetland>
+			</wildBiomes>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="ESCP_SprigganKindBase">
+		<combatPower>165</combatPower>
+		<defName>ESCP_Spriggan_Bog</defName>
+		<label>bog spriggan</label>
+		<race>ESCP_Spriggan_Bog</race>
+		<lifeStages>
+			<li>
+				<label>bog spriggan sproutling</label>
+				<labelPlural>bog spriggan sproutlings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>bog spriggan sapling</label>
+				<labelPlural>bog spriggan saplings</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/BogSpriggan</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/ESCP_Spriggan/Dessicated_Spriggan</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>ESCP_TaprootGroup</bodyPartGroup>
+					<thing>ESCP_SprigganTaproot_Bog</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

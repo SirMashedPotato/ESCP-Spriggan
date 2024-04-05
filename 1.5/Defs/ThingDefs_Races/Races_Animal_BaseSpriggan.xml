@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- base -->
+	<ThingDef ParentName="AnimalThingBase" Name="ESCP_SprigganThingBase" Abstract="True">
+		<statBases>
+			<MoveSpeed>4.7</MoveSpeed>
+			<Flammability>1.4</Flammability>
+			<PsychicSensitivity>1.5</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+			<MarketValue>500</MarketValue>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<FilthRate>1</FilthRate>
+		</statBases>
+		<uiIconScale>1.15</uiIconScale>
+		<tools>
+			<!-- hands -->
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<!-- head -->
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="ESCP_Spriggan.CompProperties_SprigganRegeneration">
+				<minPain>0.8</minPain>
+				<Severity>1</Severity>
+				<hediff>ESCP_SprigganRegen</hediff>
+			</li>
+			<!-- milkable comp in seperate defs -->
+			<!-- animal control comp in seperate defs -->
+			<li Class="AnimalBehaviours.CompProperties_FixedGender">
+				<gender>Female</gender>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_AutoNutrition">
+				<tickInterval>2000</tickInterval>
+				<consumingFoodReportString>Absorbing energy</consumingFoodReportString>
+			</li>
+		</comps>
+		<race>
+			<fleshType>ESCP_FleshSpriggan</fleshType>
+			<bloodDef>ESCP_Filth_SprigganSap</bloodDef>
+			<useMeatFrom>Muffalo</useMeatFrom>
+			<!-- they don't actually give meat, but doing this avoids new meat defs getting added -->
+			<body>ECP_Spriggan</body>
+			<herdAnimal>false</herdAnimal>
+			<predator>false</predator>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHungerRate>0.05</baseHungerRate>
+			<baseHealthScale>1.2</baseHealthScale>
+			<foodType>VegetarianAnimal</foodType>
+			<leatherDef>WoodLog</leatherDef>
+			<wildness>0.80</wildness>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<lifeExpectancy>50</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>ESCP_SprigganAdult</def>
+					<minAge>0.5</minAge>
+					<!--
+			  <soundWounded>MorrowRim_Pawn_Troll_Wounded</soundWounded>
+			  <soundDeath>MorrowRim_Pawn_Troll_Death</soundDeath>
+			  <soundCall>MorrowRim_Pawn_Troll_Call</soundCall>
+			  <soundAngry>MorrowRim_Pawn_Troll_Angry</soundAngry>
+			  -->
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>ESCP_Spriggan</li>
+		</tradeTags>
+		<butcherProducts>
+			<ESCP_SprigganSap>5</ESCP_SprigganSap>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase" Name="ESCP_SprigganKindBase" Abstract="True">
+		<combatPower>150</combatPower>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<wildGroupSize>1</wildGroupSize>
+	</PawnKindDef>
+</Defs>
