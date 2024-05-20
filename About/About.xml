@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>ESCP - Spriggan</name>
-	<packageId>ESCP.ESCP.Spriggan</packageId>
+	<packageId>ESCP.Spriggan</packageId>
 	<author>pphhyy, Rick G., SirMashedPotato</author>
 	<modVersion IgnoreIfNoMatchingField="True">1.0.9</modVersion>
 	<supportedVersions>
@@ -28,6 +28,6 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-		<li>ESCP.ESCP.RaceTools</li>
+		<li>ESCP.RaceTools</li>
 	</loadAfter>
 </ModMetaData>
