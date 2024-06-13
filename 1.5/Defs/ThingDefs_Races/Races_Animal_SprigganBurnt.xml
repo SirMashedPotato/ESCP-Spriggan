@@ -102,15 +102,6 @@
 				<workerClass>ESCP_Spriggan.DeathActionWorker_BurntSpriggan</workerClass>
 			</deathAction>
 			<wildBiomes>
-				<!-- Naturally occuring in MorrowRim biomes, but also appears from burnt trees in every biome -->
-				<Mashed_Ashlands_Ashlands MayRequire="SirMashedPotato.Ashlands">0.025</Mashed_Ashlands_Ashlands>
-				<Mashed_Ashlands_DustplainAshlands MayRequire="SirMashedPotato.Ashlands">0.025</Mashed_Ashlands_DustplainAshlands>
-
-				<Mashed_Ashlands_BlightedAshlands MayRequire="SirMashedPotato.Ashlands">0.025</Mashed_Ashlands_BlightedAshlands>
-				<Mashed_Ashlands_BlightedBogAshlands MayRequire="SirMashedPotato.Ashlands">0.05</Mashed_Ashlands_BlightedBogAshlands>
-
-				<Mashed_Ashlands_VolcanicAshlands MayRequire="SirMashedPotato.Ashlands">0.025</Mashed_Ashlands_VolcanicAshlands>
-				<Mashed_Ashlands_VolcanicBadlandAshlands MayRequire="SirMashedPotato.Ashlands">0.05</Mashed_Ashlands_VolcanicBadlandAshlands>
 				<!-- Regrowth -->
 				<RG_BoilingForest MayRequire="regrowth.botr.boilingforest">0.025</RG_BoilingForest>
 				<!-- Alpha Biomes -->
