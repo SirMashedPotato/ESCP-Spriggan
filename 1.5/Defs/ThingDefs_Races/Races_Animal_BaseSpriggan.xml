@@ -2,6 +2,12 @@
 <Defs>
 	<!-- base -->
 	<ThingDef ParentName="AnimalThingBase" Name="ESCP_SprigganThingBase" Abstract="True">
+		<modExtensions>
+			<li MayRequire="dankpyon.medieval.overhaul" Class="MedievalOverhaul.ButcherProperties">
+				<hasBone>false</hasBone>
+				<hasFat>false</hasFat>
+			</li>
+		</modExtensions>
 		<statBases>
 			<MoveSpeed>4.7</MoveSpeed>
 			<Flammability>1.4</Flammability>

@@ -34,11 +34,6 @@
 			<wildBiomes>
 				<TropicalRainforest>0.05</TropicalRainforest>
 				<TropicalSwamp>0.05</TropicalSwamp>
-				<!-- MorrowRim -->
-				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.07</MorrowRim_AshSwamp>
-				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.07</MorrowRim_Ashlands>
-				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.025</MorrowRim_VolcanicAshlands>
-				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.025</MorrowRim_Grazelands>
 				<!-- Biomes! -->
 				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TropicalIsland>
 				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TropicalArchipelago>

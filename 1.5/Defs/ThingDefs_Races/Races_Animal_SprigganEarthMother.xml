@@ -107,11 +107,6 @@
 				<AridShrubland>0.005</AridShrubland>
 				<Desert>0.005</Desert>
 				<TropicalSwamp>0.005</TropicalSwamp>
-				<!-- MorrowRim -->
-				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.005</MorrowRim_AshSwamp>
-				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.005</MorrowRim_Ashlands>
-				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.005</MorrowRim_VolcanicAshlands>
-				<MorrowRim_Grazelands MayRequire="SirMashedPotato.MorrowRim.Grazelands">0.005</MorrowRim_Grazelands>
 				<!-- Biomes! -->
 				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TemperateIsland>
 				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TemperateArchipelago>
